@@ -2485,17 +2485,24 @@ body {
       html #museum .section-container .big-container:nth-child(2),
       body #museum .section-container .big-container:nth-child(2) {
         width: 100%;
-        margin-left: auto; }
+        margin-left: auto;
+        height: auto; }
         html #museum .section-container .big-container:nth-child(2) .letters-wrapper,
         body #museum .section-container .big-container:nth-child(2) .letters-wrapper {
-          margin-top: 0; }
-          html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container img,
-          body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container img {
-            width: 100%; }
-          html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .img-static,
-          body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .img-static {
-            width: 100%;
-            object-fit: fill; }
+          margin-top: 0;
+          height: auto; }
+          html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container,
+          body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container {
+            height: auto; }
+            html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container img,
+            body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container img {
+              width: 100%;
+              height: auto; }
+            html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .img-static,
+            body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .img-static {
+              width: 100%;
+              object-fit: fill;
+              height: auto; }
           html #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum .letter,
           body #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum .letter {
             font-size: 112px;
