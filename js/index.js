@@ -7,7 +7,7 @@ const categories = document.querySelectorAll('.menu-extended .category');
 const customCursor = document.querySelector('.custom-cursor');
 
 // Click Animation on Image Wrappers
-
+console.log("bla");
 imgWrappers.forEach(imgWrapper => {
 
     // Adding Arrows to Image Wrappers
