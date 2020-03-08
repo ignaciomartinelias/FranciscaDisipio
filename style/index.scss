@@ -3090,8 +3090,6 @@ body {
       margin: 25px 25px 0 25px;
       .section-container {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         .big-container {
           width: 80%;
           margin-bottom: 50px;
@@ -3135,9 +3133,8 @@ body {
             }
   
             .img-container {
-              display: flex;
+              display: block;
               width: 100%;
-              justify-content: center;
   
               img {
                 width: 100%;
@@ -3155,8 +3152,8 @@ body {
                   transform: translateX(0%) scaleX(1);
                 }
   
-                &.image-fixed {
-                  position: relative;
+                &.image-fixed.image-back {
+                  position: static;
                 }
               }
             }

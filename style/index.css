@@ -2465,9 +2465,7 @@ body {
     margin: 25px 25px 0 25px; }
     html #museum .section-container,
     body #museum .section-container {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
+      flex-direction: column; }
       html #museum .section-container .big-container,
       body #museum .section-container .big-container {
         width: 80%;
@@ -2511,9 +2509,8 @@ body {
               line-height: 80px; }
           html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container,
           body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container {
-            display: flex;
-            width: 100%;
-            justify-content: center; }
+            display: block;
+            width: 100%; }
             html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container img,
             body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container img {
               width: 100%; }
@@ -2528,9 +2525,9 @@ body {
               body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back.image-highlight {
                 opacity: 1;
                 transform: translateX(0%) scaleX(1); }
-              html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back.image-fixed,
-              body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back.image-fixed {
-                position: relative; }
+              html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back.image-fixed.image-back,
+              body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back.image-fixed.image-back {
+                position: static; }
   html #contact,
   body #contact {
     height: 100vh;
