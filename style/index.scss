@@ -139,6 +139,7 @@ body {
     top: 50px;
     right: 50px;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 5px;
@@ -180,6 +181,7 @@ body {
         width: 35px;
         height: 4px;
         transform: translateY(9px) rotate(40deg);
+        -webkit-transform: translateY(9px) rotate(40deg);
         transition-property: background-color, transform, width, height;
         transition-duration: 0.5s, 1s, 1s, 1s;
 
@@ -194,6 +196,7 @@ body {
 
         &:nth-child(3) {
           transform: translateY(-9px) rotate(-40deg);
+          -webkit-transform: translateY(-9px) rotate(-40deg);
         }
       }
     }
@@ -214,6 +217,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     transform: translate(100%, 0);
+    -webkit-transform: translate(100%, 0);
     opacity: 0.5;
     transition-property: transform, opacity;
     transition-duration: 0.5s, 0.5s;
@@ -338,6 +342,7 @@ body {
     .image-back {
       filter: blur(10px);
       transform: translateX(50%) scaleX(2);
+      -webkit-transform: translateX(50%) scaleX(2);
       transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out,
         transform 0.5s ease-in-out;
         -webkit-transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out,
@@ -347,6 +352,7 @@ body {
         opacity: 1;
         filter: blur(0);
         transform: translateX(0) scaleX(1);
+        -webkit-transform: translateX(0) scaleX(1);
         transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out,
           transform 0.5s ease-in-out;
           -webkit-transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out,
