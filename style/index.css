@@ -2465,7 +2465,9 @@ body {
     margin: 25px 25px 0 25px; }
     html #museum .section-container,
     body #museum .section-container {
-      flex-direction: column; }
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
       html #museum .section-container .big-container,
       body #museum .section-container .big-container {
         width: 80%;
