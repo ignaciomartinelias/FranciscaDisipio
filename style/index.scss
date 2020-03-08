@@ -73,7 +73,7 @@ body {
       border-color: white;
       z-index: 10;
       transition-property: top, left, background-color, border-color, transform;
-      transition-duration: 0.2s, 0.2s, 0.5s, 0.5s, 0.5;
+      transition-duration: 0.2s, 0.2s, 0.5s, 0.5s, 0.5s;
       transition-timing-function: ease-out, ease-out, ease-out;
       mix-blend-mode: normal;
 
@@ -141,7 +141,7 @@ body {
       width: 20px;
       margin-bottom: 5px;
       z-index: 10;
-      transition-property: background-color transform;
+      transition-property: background-color, transform;
       transition-duration: 0.5s, 1s;
 
       &:nth-child(2) {
