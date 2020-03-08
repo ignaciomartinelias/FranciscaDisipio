@@ -52,6 +52,9 @@ body {
     transition-property: top, left, background-color, border-color, transform;
     transition-duration: 0.2s, 0.2s, 0.5s, 0.5s, 0.5s;
     transition-timing-function: ease-out, ease-out, ease-out;
+    -webkit-transition-property: top, left, background-color, border-color, transform;
+    -webkit-transition-duration: 0.2s, 0.2s, 0.5s, 0.5s, 0.5s;
+    -webkit-transition-timing-function: ease-out, ease-out, ease-out;
     pointer-events: none; }
     html .custom-cursor.toggle-on,
     body .custom-cursor.toggle-on {
@@ -60,6 +63,9 @@ body {
       transition-property: top, left, background-color, border-color, transform;
       transition-duration: 0.2s, 0.2s, 0.5s, 0.5s, 0.5s;
       transition-timing-function: ease-out, ease-out, ease-out;
+      -webkit-transition-property: top, left, background-color, border-color, transform;
+      -webkit-transition-duration: 0.2s, 0.2s, 0.5s, 0.5s, 0.5s;
+      -webkit-transition-timing-function: ease-out, ease-out, ease-out;
       mix-blend-mode: normal; }
       html .custom-cursor.toggle-on.hover,
       body .custom-cursor.toggle-on.hover {
@@ -70,7 +76,8 @@ body {
       transform: translate(-50%, -50%) scale(0.75);
       background-color: rgba(0, 0, 0, 0.25);
       border-width: 3px;
-      transition: 0.5s ease-out; }
+      transition: 0.5s ease-out;
+      -webkit-transition: 0.5s ease-out; }
     html .custom-cursor.click,
     body .custom-cursor.click {
       animation: click 0.2s ease-in 1;
@@ -79,13 +86,15 @@ body {
     body .custom-cursor.dissapear {
       transform: translate(-50%, -50%) scale(0);
       border-width: 5px;
-      transition: 0.5s; }
+      transition: 0.5s;
+      -webkit-transition: 0.5s; }
       html .custom-cursor.dissapear.hover,
       body .custom-cursor.dissapear.hover {
         transform: translate(-50%, -50%) scale(0.75);
         background-color: rgba(0, 0, 0, 0.5);
         border-width: 3px;
-        transition: 0.2s ease-out; }
+        transition: 0.2s ease-out;
+        -webkit-transition: 0.2s ease-out; }
 @keyframes click {
   25% {
     transform: translate(-50%, -50%) scale(0.25);
@@ -106,7 +115,9 @@ body {
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 5px;
     transition-property: background-color;
-    transition-duration: 0.1s; }
+    transition-duration: 0.1s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: 0.1s; }
     html .menu .menu-bar,
     body .menu .menu-bar {
       background-color: black;
@@ -115,11 +126,15 @@ body {
       margin-bottom: 5px;
       z-index: 10;
       transition-property: background-color, transform;
-      transition-duration: 0.5s, 1s; }
+      transition-duration: 0.5s, 1s;
+      -webkit-transition-property: background-color, transform;
+      -webkit-transition-duration: 0.5s, 1s; }
       html .menu .menu-bar:nth-child(2),
       body .menu .menu-bar:nth-child(2) {
         transition-property: opacity;
-        transition-duration: 1s; }
+        transition-duration: 1s;
+        -webkit-transition-property: opacity;
+        -webkit-transition-duration: 1s; }
       html .menu .menu-bar:last-child,
       body .menu .menu-bar:last-child {
         margin-bottom: 0; }
@@ -127,7 +142,9 @@ body {
     body .menu.toggle-on {
       background-color: transparent;
       transition-property: background-color;
-      transition-duration: 0.1s; }
+      transition-duration: 0.1s;
+      -webkit-transition-property: background-color;
+      -webkit-transition-duration: 0.1s; }
       html .menu.toggle-on .menu-bar,
       body .menu.toggle-on .menu-bar {
         background-color: white;
@@ -135,11 +152,14 @@ body {
         height: 4px;
         transform: translateY(9px) rotate(40deg);
         transition-property: background-color, transform, width, height;
-        transition-duration: 0.5s, 1s, 1s, 1s; }
+        transition-duration: 0.5s, 1s, 1s, 1s;
+        -webkit-transition-property: background-color, transform, width, height;
+        -webkit-transition-duration: 0.5s, 1s, 1s, 1s; }
         html .menu.toggle-on .menu-bar:nth-child(2),
         body .menu.toggle-on .menu-bar:nth-child(2) {
           opacity: 0;
-          transition: 0.25s; }
+          transition: 0.25s;
+          -webkit-transition: 0.25s; }
         html .menu.toggle-on .menu-bar:nth-child(3),
         body .menu.toggle-on .menu-bar:nth-child(3) {
           transform: translateY(-9px) rotate(-40deg); }
@@ -160,7 +180,11 @@ body {
     opacity: 0.5;
     transition-property: transform, opacity;
     transition-duration: 0.5s, 0.5s;
-    transition-timing-function: ease-in-out; }
+    transition-timing-function: ease-in-out;
+    -webkit-transform: translate(100%, 0);
+    -webkit-transition-property: transform, opacity;
+    -webkit-transition-duration: 0.5s, 0.5s;
+    -webkit-transition-timing-function: ease-in-out; }
     html .menu-extended .category,
     body .menu-extended .category {
       color: white;
@@ -170,18 +194,27 @@ body {
       transform: translate(100%, 0);
       transition-property: transform, opacity;
       transition-duration: 0.5s, 0.5s;
-      transition-timing-function: ease-in-out; }
+      transition-timing-function: ease-in-out;
+      -webkit-transform: translate(100%, 0);
+      -webkit-transition-property: transform, opacity;
+      -webkit-transition-duration: 0.5s, 0.5s;
+      -webkit-transition-timing-function: ease-in-out; }
       html .menu-extended .category.appear-in,
       body .menu-extended .category.appear-in {
         opacity: 1;
         transform: translate(0, 0);
         transition-property: transform, opacity;
         transition-duration: 0.5s, 0.5s;
-        transition-timing-function: ease-in-out; }
+        transition-timing-function: ease-in-out;
+        -webkit-transform: translate(0, 0);
+        -webkit-transition-property: transform, opacity;
+        -webkit-transition-duration: 0.5s, 0.5s;
+        -webkit-transition-timing-function: ease-in-out; }
         html .menu-extended .category.appear-in:hover .category-name:after,
         body .menu-extended .category.appear-in:hover .category-name:after {
           opacity: 1;
-          transform: scale(1); }
+          transform: scale(1);
+          -webkit-transform: scale(1); }
       html .menu-extended .category .number,
       body .menu-extended .category .number {
         margin-right: 100px; }
@@ -200,14 +233,20 @@ body {
           margin-top: 10px;
           opacity: 0;
           transition: opacity 0.5s, transform 0.5s;
-          transform: scale(0, 1); }
+          -webkit-transition: opacity 0.5s, transform 0.5s;
+          transform: scale(0, 1);
+          -webkit-transform: scale(0, 1); }
     html .menu-extended.toggle-on,
     body .menu-extended.toggle-on {
       opacity: 1;
       transform: translate(0, 0);
+      -webkit-transform: translate(0, 0);
       transition-property: transform, opacity;
       transition-duration: 0.5s, 0.5s;
-      transition-timing-function: ease-in-out; }
+      transition-timing-function: ease-in-out;
+      -webkit-transition-property: transform, opacity;
+      -webkit-transition-duration: 0.5s, 0.5s;
+      -webkit-transition-timing-function: ease-in-out; }
   html .back-arrow,
   body .back-arrow {
     position: absolute;
@@ -217,7 +256,8 @@ body {
     filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
     transform: translateY(-50%);
     opacity: 0;
-    transition: 0.5s; }
+    transition: 0.5s;
+    -webkit-transition: 0.5s; }
   html .next-arrow,
   body .next-arrow {
     position: absolute;
@@ -227,13 +267,15 @@ body {
     filter: drop-shadow(-5px 5px 3px rgba(0, 0, 0, 0.5));
     transform: translateY(-50%);
     opacity: 0;
-    transition: 0.5s; }
+    transition: 0.5s;
+    -webkit-transition: 0.5s; }
   html .img-container:hover .next-arrow,
   html .img-container:hover .back-arrow,
   body .img-container:hover .next-arrow,
   body .img-container:hover .back-arrow {
     opacity: 1;
-    transition: 0.5s; }
+    transition: 0.5s;
+    -webkit-transition: 0.5s; }
   html .img-container,
   body .img-container {
     overflow: hidden; }
@@ -241,13 +283,15 @@ body {
     body .img-container .image-back {
       filter: blur(10px);
       transform: translateX(50%) scaleX(2);
-      transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out; }
+      transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      -webkit-transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out; }
       html .img-container .image-back.image-highlight,
       body .img-container .image-back.image-highlight {
         opacity: 1;
         filter: blur(0);
         transform: translateX(0) scaleX(1);
-        transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out; }
+        transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        -webkit-transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out; }
   html header,
   body header {
     height: 100vh;
@@ -327,6 +371,7 @@ body {
       background-color: white;
       position: relative;
       transition: 2s;
+      -webkit-transition: 2s;
       overflow: hidden; }
       html #furia .section-container .img-container .image-back,
       body #furia .section-container .img-container .image-back {
@@ -640,11 +685,13 @@ body {
           top: 0;
           left: 0;
           opacity: 0;
-          transition: 1s; }
+          transition: 1s;
+          -webkit-transition: 1s; }
           html #jewelry .section-container .big-container:nth-child(2) .img-container .image-back.image-highlight,
           body #jewelry .section-container .big-container:nth-child(2) .img-container .image-back.image-highlight {
             opacity: 1;
-            transition: 1s; }
+            transition: 1s;
+            -webkit-transition: 1s; }
           html #jewelry .section-container .big-container:nth-child(2) .img-container .image-back.image-fixed,
           body #jewelry .section-container .big-container:nth-child(2) .img-container .image-back.image-fixed {
             position: static; }
