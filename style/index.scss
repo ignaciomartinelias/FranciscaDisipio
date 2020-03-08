@@ -3107,32 +3107,56 @@ body {
           }
         }
         .big-container:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           width: 100%;
           margin-left: auto;
+          margin-right: auto;
+  
           .letters-wrapper {
-            margin-top: 0;
-            justify-content: center;
-            align-items: center;
-            .img-container {
-              img {
-                width: 100%;
-                height: auto;
-              }
-              .img-static {
-                width: 100%;
-                height: auto;
-              }
-              .image-highlight {
-                height: auto;
-              }
-              .image-back {
-                height: auto;
-              }
-            }
+            position: relative;
             .letters-museum {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) rotate(-90deg);
+              transform-origin: center center;
+              display: flex;
+              flex-direction: column;
+              z-index: -1;
+  
               .letter {
                 font-size: 112px;
                 line-height: 80px;
+              }
+            }
+  
+            .img-container {
+              display: flex;
+              width: 100%;
+              justify-content: center;
+  
+              img {
+                width: 100%;
+              }
+  
+              .image-back {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transform: translateX(50%) scaleX(2);
+  
+                &.image-highlight {
+                  opacity: 1;
+                  transform: translateX(0%) scaleX(1);
+                }
+  
+                &.image-fixed {
+                  position: static;
+                }
               }
             }
           }

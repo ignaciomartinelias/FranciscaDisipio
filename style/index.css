@@ -2484,31 +2484,52 @@ body {
           font-size: 92px; }
       html #museum .section-container .big-container:nth-child(2),
       body #museum .section-container .big-container:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        margin-left: auto; }
+        margin-left: auto;
+        margin-right: auto; }
         html #museum .section-container .big-container:nth-child(2) .letters-wrapper,
         body #museum .section-container .big-container:nth-child(2) .letters-wrapper {
-          margin-top: 0;
-          justify-content: center;
-          align-items: center; }
-          html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container img,
-          body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container img {
+          position: relative; }
+          html #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum,
+          body #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            transform-origin: center center;
+            display: flex;
+            flex-direction: column;
+            z-index: -1; }
+            html #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum .letter,
+            body #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum .letter {
+              font-size: 112px;
+              line-height: 80px; }
+          html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container,
+          body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container {
+            display: flex;
             width: 100%;
-            height: auto; }
-          html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .img-static,
-          body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .img-static {
-            width: 100%;
-            height: auto; }
-          html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-highlight,
-          body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-highlight {
-            height: auto; }
-          html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back,
-          body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back {
-            height: auto; }
-          html #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum .letter,
-          body #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum .letter {
-            font-size: 112px;
-            line-height: 80px; }
+            justify-content: center; }
+            html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container img,
+            body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container img {
+              width: 100%; }
+            html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back,
+            body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back {
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0;
+              transform: translateX(50%) scaleX(2); }
+              html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back.image-highlight,
+              body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back.image-highlight {
+                opacity: 1;
+                transform: translateX(0%) scaleX(1); }
+              html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back.image-fixed,
+              body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back.image-fixed {
+                position: static; }
   html #contact,
   body #contact {
     height: 100vh;
