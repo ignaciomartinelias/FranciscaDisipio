@@ -8,10 +8,13 @@
 }
 
 @font-face {
-  font-family: "Tw-Cen-Mt-Italic";
-  src: url("../assets/fonts/tw-cen-mt-italic.ttf"),
-  url("../assets/fonts/tw-cen-mt-italic.ttf") format('truetype');
-  font-style: italic;
+  font-family: 'TwCenMtItalic';
+  src: url("../assets/fonts/TwCenMT-Italic.eot"); /* IE9+ Compat Modes */
+  src: url("../assets/fonts/TwCenMT-Italic.eot?#iefix") format('embedded-opentype'), /* IE6-IE8 */
+       url("../assets/fonts/TwCenMT-Italic.woff2") format('woff2'), /* Super modern browsers */
+       url("../assets/fonts/TwCenMT-Italic.woff") format('woff'), /* Modern browsers */
+       url("../assets/fonts/TwCenMT-Italic.ttf")  format('truetype'), /* Safari, Android, iOS */
+       url("../assets/fonts/TwCenMT-Italic.svg") format('svg'); /* Legacy iOS */
 }
 
 /* STYLES */
@@ -33,7 +36,7 @@ body {
   cursor: none;
 
   p {
-    font-family: "Tw-Cen-Mt-Italic";
+    font-family: "TwCenMtItalic";
     text-align: justify;
     line-height: 25px;
     font-size: 14pt;
@@ -1138,7 +1141,7 @@ body {
       font-size: 20px;
       text-transform: uppercase;
       font-style: italic;
-      font-family: "Tw-Cen-Mt-Italic";
+      font-family: "TwCenMtItalic";
       padding: 40px;
       background-image: url(../assets/images/brackets.png);
       background-size: contain;
@@ -2461,7 +2464,7 @@ body {
         font-size: 20px;
         text-transform: uppercase;
         font-style: italic;
-        font-family: "Tw-Cen-Mt-Italic";
+        font-family: "TwCenMtItalic";
         padding: 40px;
         background-image: url(../assets/images/brackets.png);
         background-size: contain;
@@ -2973,7 +2976,7 @@ body {
         font-size: 16px;
         text-transform: uppercase;
         font-style: italic;
-        font-family: "Tw-Cen-Mt-Italic";
+        font-family: "TwCenMtItalic";
         padding: 30px;
         background-image: url(../assets/images/brackets.png);
         background-size: contain;
