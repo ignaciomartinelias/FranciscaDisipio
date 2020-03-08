@@ -50,8 +50,7 @@ body {
     transition-property: top, left, background-color, border-color, transform;
     transition-duration: 0.2s, 0.2s, 0.5s, 0.5s, 0.5s;
     transition-timing-function: ease-out, ease-out, ease-out;
-    pointer-events: none;
-    mix-blend-mode: overlay; }
+    pointer-events: none; }
     html .custom-cursor.toggle-on,
     body .custom-cursor.toggle-on {
       border-color: white;
@@ -1659,17 +1658,19 @@ body {
   body .next-arrow,
   body .back-arrow {
     opacity: 1; }
-  html .menu .menu-bar,
-  body .menu .menu-bar {
-    height: 4px;
-    width: 35px;
-    margin-bottom: 5px;
+  html .menu,
+  body .menu {
     transform: translate(50%, -50%); }
-  html .menu.toggle-on .menu-bar,
-  body .menu.toggle-on .menu-bar {
-    width: 40px;
-    height: 5px;
-    transform: translateY(11px) rotate(40deg); }
+    html .menu .menu-bar,
+    body .menu .menu-bar {
+      height: 4px;
+      width: 30px;
+      margin-bottom: 6px; }
+    html .menu.toggle-on .menu-bar,
+    body .menu.toggle-on .menu-bar {
+      width: 40px;
+      height: 5px;
+      transform: translateY(13px) rotate(40deg); }
   html .menu-extended,
   body .menu-extended {
     padding: 150px 75px; }
@@ -1715,7 +1716,7 @@ body {
           margin: 25% 0; }
       html header .header-item .text-wrapper,
       body header .header-item .text-wrapper {
-        width: 80%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         padding: 0 50px; }
@@ -1762,6 +1763,179 @@ body {
       font-size: 162px;
       color: transparent;
       -webkit-text-stroke: 6px;
-      -webkit-text-stroke-color: black; } }
+      -webkit-text-stroke-color: black; }
+  html #furia .section-container .img-container,
+  body #furia .section-container .img-container {
+    width: 85%; }
+  html #furia .section-container .furia-txt,
+  body #furia .section-container .furia-txt {
+    width: 70%;
+    text-align-last: right;
+    font-size: 20px;
+    line-height: 24px; }
+  html #furia .furia,
+  body #furia .furia {
+    position: absolute;
+    bottom: 250px;
+    left: 0;
+    font-size: 162px;
+    z-index: -1;
+    transform: rotate(-90deg) translateY(-50%); }
+  html #furia .number-01,
+  body #furia .number-01 {
+    top: -120px; }
+  html #container .section-container .big-container .container-txt,
+  body #container .section-container .big-container .container-txt {
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 0; }
+  html #container .section-container .big-container .number-02,
+  body #container .section-container .big-container .number-02 {
+    position: absolute;
+    top: 0;
+    right: 2.5%;
+    transform: translateY(-60%);
+    font-size: 148px; }
+  html #container .section-container .big-container:nth-child(2),
+  body #container .section-container .big-container:nth-child(2) {
+    width: 50%; }
+    html #container .section-container .big-container:nth-child(2) .letters-container,
+    body #container .section-container .big-container:nth-child(2) .letters-container {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-size: 124px;
+      bottom: 20%;
+      transform: translateY(50%); }
+      html #container .section-container .big-container:nth-child(2) .letters-container .letters,
+      body #container .section-container .big-container:nth-child(2) .letters-container .letters {
+        position: relative;
+        font-size: 124px;
+        height: 200px; }
+  html #dimension .section-container .big-container .number-03,
+  body #dimension .section-container .big-container .number-03 {
+    transform: translateY(50%);
+    -webkit-text-stroke: 4px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.75); }
+  html #dimension .section-container .big-container .dimension-txt,
+  body #dimension .section-container .big-container .dimension-txt {
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px; }
+  html #dimension .section-container .big-container .img-static .dimension-letters,
+  body #dimension .section-container .big-container .img-static .dimension-letters {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 112px; }
+  html #jewelry .section-container,
+  body #jewelry .section-container {
+    width: 85%; }
+    html #jewelry .section-container .big-container .jewelry-letters,
+    body #jewelry .section-container .big-container .jewelry-letters {
+      font-size: 124px;
+      transform: translate(60%, -10%); }
+    html #jewelry .section-container .big-container .jewelry-content .img-static,
+    body #jewelry .section-container .big-container .jewelry-content .img-static {
+      width: 75%;
+      transform: translateY(-175px);
+      z-index: -1;
+      position: relative; }
+      html #jewelry .section-container .big-container .jewelry-content .img-static img,
+      body #jewelry .section-container .big-container .jewelry-content .img-static img {
+        width: 100%; }
+      html #jewelry .section-container .big-container .jewelry-content .img-static .number-04,
+      body #jewelry .section-container .big-container .jewelry-content .img-static .number-04 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(-105%, 25%);
+        font-size: 148px; }
+    html #jewelry .section-container .big-container .jewelry-content .jewelry-txt,
+    body #jewelry .section-container .big-container .jewelry-content .jewelry-txt {
+      width: 100%;
+      font-size: 20px;
+      line-height: 24px;
+      margin-right: 20px;
+      margin-top: 10px; }
+    html #jewelry .section-container .big-container:nth-child(2),
+    body #jewelry .section-container .big-container:nth-child(2) {
+      width: 100%; }
+  html #fangio .fondo-fangio,
+  body #fangio .fondo-fangio {
+    height: 80%;
+    transform: translate(47.5%); }
+  html #fangio .section-container .big-container .fangio-txt,
+  body #fangio .section-container .big-container .fangio-txt {
+    width: 65%;
+    font-size: 20px;
+    line-height: 24px;
+    margin-right: 20px;
+    margin-top: 10px;
+    position: relative; }
+  html #fangio .section-container .big-container:nth-child(2),
+  body #fangio .section-container .big-container:nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse; }
+  html #matrix .section-container .big-container .matrix-txt,
+  body #matrix .section-container .big-container .matrix-txt {
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px; }
+  html #museum .section-container .big-container,
+  body #museum .section-container .big-container {
+    margin-bottom: 100px; }
+    html #museum .section-container .big-container .museum-txt,
+    body #museum .section-container .big-container .museum-txt {
+      width: 100%;
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 22.5%; }
+    html #museum .section-container .big-container .number-07,
+    body #museum .section-container .big-container .number-07 {
+      font-size: 148px; }
+  html #museum .section-container .big-container:nth-child(2) .letters-wrapper,
+  body #museum .section-container .big-container:nth-child(2) .letters-wrapper {
+    margin-top: 27.5%; }
+    html #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum .letter,
+    body #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum .letter {
+      font-size: 162px;
+      line-height: 120px; }
+  html #contact,
+  body #contact {
+    height: 100vh;
+    margin-top: -10px; }
+    html #contact .contact-container,
+    body #contact .contact-container {
+      position: relative;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 20px;
+      text-transform: uppercase;
+      font-style: italic;
+      font-family: "Tw-Cen-Mt-Italic";
+      padding: 40px;
+      background-image: url(../assets/images/brackets.png);
+      background-size: contain;
+      background-position-y: center;
+      background-repeat: no-repeat;
+      z-index: 3; }
+      html #contact .contact-container a,
+      body #contact .contact-container a {
+        color: white;
+        text-decoration: none;
+        cursor: none; }
+    html #contact img,
+    body #contact img {
+      position: absolute;
+      bottom: -200px;
+      width: 100%;
+      left: 0;
+      z-index: 1; } }
 
 /*# sourceMappingURL=index.css.map */

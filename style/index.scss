@@ -63,7 +63,6 @@ body {
     transition-duration: 0.2s, 0.2s, 0.5s, 0.5s, 0.5s;
     transition-timing-function: ease-out, ease-out, ease-out;
     pointer-events: none;
-    mix-blend-mode: overlay;
 
     &.toggle-on {
       border-color: white;
@@ -2121,17 +2120,17 @@ body {
     }
     // MENU TOGGLER
     .menu {
+      transform: translate(50%, -50%);
       .menu-bar {
         height: 4px;
-        width: 35px;
-        margin-bottom: 5px;
-        transform: translate(50%, -50%);
+        width: 30px;
+        margin-bottom: 6px;
       }
       &.toggle-on {
         .menu-bar {
           width: 40px;
           height: 5px;
-          transform: translateY(11px) rotate(40deg);
+          transform: translateY(13px) rotate(40deg);
         }
       }
     }
@@ -2185,7 +2184,7 @@ body {
         }
 
         .text-wrapper {
-          width: 80%;
+          width: 90%;
           display: flex;
           flex-direction: column;
           padding: 0 50px;
@@ -2240,6 +2239,247 @@ body {
         color: transparent;
         -webkit-text-stroke: 6px;
         -webkit-text-stroke-color: black;
+      }
+    }
+
+    // FURIA
+    #furia {
+      .section-container {
+        .img-container {
+          width: 85%;
+        }
+
+        .furia-txt {
+          width: 70%;
+          text-align-last: right;
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+
+      .furia {
+        position: absolute;
+        bottom: 250px;
+        left: 0;
+        font-size: 162px;
+        z-index: -1;
+        transform: rotate(-90deg) translateY(-50%);
+      }
+      .number-01 {
+        top: -120px;
+      }
+    }
+
+    // CONTAINER
+    #container .section-container {
+      .big-container {
+        .container-txt {
+          width: 100%;
+          font-size: 20px;
+          line-height: 24px;
+          margin-top: 0;
+        }
+        .number-02 {
+          position: absolute;
+          top: 0;
+          right: 2.5%;
+          transform: translateY(-60%);
+          font-size: 148px;
+        }
+      }
+      .big-container:nth-child(2) {
+        width: 50%;
+        .letters-container {
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          font-size: 124px;
+          bottom: 20%;
+          transform: translateY(50%);
+
+          .letters {
+            position: relative;
+            font-size: 124px;
+            height: 200px;
+          }
+        }
+      }
+    }
+
+    // 3DIMENSION
+
+    #dimension {
+      .section-container {
+        .big-container {
+          .number-03 {
+            transform: translateY(50%);
+            -webkit-text-stroke: 4px;
+            -webkit-text-stroke-color: rgba(0, 0, 0, 0.75);
+          }
+
+          .dimension-txt {
+            width: 100%;
+            font-size: 20px;
+            line-height: 24px;
+          }
+          .img-static {
+            .dimension-letters {
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 112px;
+            }
+          }
+        }
+      }
+    }
+
+    // JEWELRY
+    #jewelry {
+      .section-container {
+        width: 85%;
+        .big-container {
+          .jewelry-letters {
+            font-size: 124px;
+            transform: translate(60%, -10%);
+          }
+          .jewelry-content {
+            .img-static {
+              width: 75%;
+              transform: translateY(-175px);
+              z-index: -1;
+              position: relative;
+              img {
+                width: 100%;
+              }
+              .number-04 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translate(-105%, 25%);
+                font-size: 148px;
+              }
+            }
+            .jewelry-txt {
+              width: 100%;
+              font-size: 20px;
+              line-height: 24px;
+              margin-right: 20px;
+              margin-top: 10px;
+            }
+          }
+        }
+        .big-container:nth-child(2) {
+          width: 100%;
+        }
+      }
+    }
+
+    //   FANGIO
+    #fangio {
+      .fondo-fangio {
+        height: 80%;
+        transform: translate(47.5%);
+      }
+      .section-container {
+        .big-container {
+          .fangio-txt {
+            width: 65%;
+            font-size: 20px;
+            line-height: 24px;
+            margin-right: 20px;
+            margin-top: 10px;
+            position: relative;
+          }
+        }
+
+        .big-container:nth-child(2) {
+          width: 100%;
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+    }
+
+    // MATRIX
+
+    #matrix {
+      .section-container {
+        .big-container {
+          .matrix-txt {
+            width: 100%;
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+
+    // MUSEUM
+
+    #museum {
+      .section-container {
+        .big-container {
+          margin-bottom: 100px;
+          .museum-txt {
+            width: 100%;
+            font-size: 20px;
+            line-height: 24px;
+            margin-top: 22.5%;
+          }
+          .number-07 {
+            font-size: 148px;
+          }
+        }
+        .big-container:nth-child(2) {
+          .letters-wrapper {
+            margin-top: 27.5%;
+            .letters-museum {
+              .letter {
+                font-size: 162px;
+                line-height: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #contact {
+      height: 100vh;
+      margin-top: -10px;
+
+      .contact-container {
+        position: relative;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-style: italic;
+        font-family: "Tw-Cen-Mt-Italic";
+        padding: 40px;
+        background-image: url(../assets/images/brackets.png);
+        background-size: contain;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        z-index: 3;
+
+        a {
+          color: white;
+          text-decoration: none;
+          cursor: none;
+        }
+      }
+
+      img {
+        position: absolute;
+        bottom: -200px;
+        width: 100%;
+        left: 0;
+        z-index: 1;
       }
     }
   }
