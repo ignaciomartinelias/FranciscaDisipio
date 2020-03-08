@@ -2945,12 +2945,10 @@ body {
           }
         }
         .big-container:nth-child(2) {
-          height: fit-content;
           width: 100%;
-          margin: 0;
+          margin-left: auto;
           img {
             width: 100%;
-            object-fit: contain;
           }
           .letters-wrapper {
             margin-top: 0;

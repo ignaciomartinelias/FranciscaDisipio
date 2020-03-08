@@ -2352,13 +2352,11 @@ body {
           font-size: 92px; }
       html #museum .section-container .big-container:nth-child(2),
       body #museum .section-container .big-container:nth-child(2) {
-        height: fit-content;
         width: 100%;
-        margin: 0; }
+        margin-left: auto; }
         html #museum .section-container .big-container:nth-child(2) img,
         body #museum .section-container .big-container:nth-child(2) img {
-          width: 100%;
-          object-fit: contain; }
+          width: 100%; }
         html #museum .section-container .big-container:nth-child(2) .letters-wrapper,
         body #museum .section-container .big-container:nth-child(2) .letters-wrapper {
           margin-top: 0; }
