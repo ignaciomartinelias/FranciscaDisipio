@@ -2491,7 +2491,8 @@ body {
           width: 100%; }
         html #museum .section-container .big-container:nth-child(2) .letters-wrapper,
         body #museum .section-container .big-container:nth-child(2) .letters-wrapper {
-          margin-top: 0; }
+          margin-top: 0;
+          max-height: 250px; }
           html #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum .letter,
           body #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum .letter {
             font-size: 112px;
