@@ -2358,7 +2358,7 @@ body {
         html #museum .section-container .big-container:nth-child(2) img,
         body #museum .section-container .big-container:nth-child(2) img {
           width: 100%;
-          object-fit: cover; }
+          object-fit: contain; }
         html #museum .section-container .big-container:nth-child(2) .letters-wrapper,
         body #museum .section-container .big-container:nth-child(2) .letters-wrapper {
           margin-top: 0; }
