@@ -3109,21 +3109,23 @@ body {
         .big-container:nth-child(2) {
           width: 100%;
           margin-left: auto;
-          height: auto;
           .letters-wrapper {
             margin-top: 0;
-            height: auto;
             justify-content: center;
             align-items: center;
             .img-container {
-              height: auto;
               img {
                 width: 100%;
                 height: auto;
               }
               .img-static {
                 width: 100%;
-                object-fit: fill;
+                height: auto;
+              }
+              .image-highlight {
+                height: auto;
+              }
+              .image-back {
                 height: auto;
               }
             }
