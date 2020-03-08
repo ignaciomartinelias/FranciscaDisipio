@@ -3107,16 +3107,15 @@ body {
           }
         }
         .big-container:nth-child(2) {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          display: block;
           width: 100%;
           margin-left: auto;
           margin-right: auto;
   
           .letters-wrapper {
             position: relative;
+            margin: 0;
+            margin-bottom: 50px;
             .letters-museum {
               position: absolute;
               top: 50%;
@@ -3155,7 +3154,7 @@ body {
                 }
   
                 &.image-fixed {
-                  position: static;
+                  position: relative;
                 }
               }
             }

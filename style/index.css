@@ -2484,16 +2484,15 @@ body {
           font-size: 92px; }
       html #museum .section-container .big-container:nth-child(2),
       body #museum .section-container .big-container:nth-child(2) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        display: block;
         width: 100%;
         margin-left: auto;
         margin-right: auto; }
         html #museum .section-container .big-container:nth-child(2) .letters-wrapper,
         body #museum .section-container .big-container:nth-child(2) .letters-wrapper {
-          position: relative; }
+          position: relative;
+          margin: 0;
+          margin-bottom: 50px; }
           html #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum,
           body #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum {
             position: absolute;
@@ -2529,7 +2528,7 @@ body {
                 transform: translateX(0%) scaleX(1); }
               html #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back.image-fixed,
               body #museum .section-container .big-container:nth-child(2) .letters-wrapper .img-container .image-back.image-fixed {
-                position: static; }
+                position: relative; }
   html #contact,
   body #contact {
     height: 100vh;
