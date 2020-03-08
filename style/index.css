@@ -1937,5 +1937,460 @@ body {
       width: 100%;
       left: 0;
       z-index: 1; } }
+@media (max-width: 450px) {
+  html .menu,
+  body .menu {
+    transform: translate(50%, -50%);
+    top: 40px;
+    right: 30px; }
+    html .menu .menu-bar,
+    body .menu .menu-bar {
+      height: 3px;
+      width: 20px;
+      margin-bottom: 4px; }
+    html .menu.toggle-on .menu-bar,
+    body .menu.toggle-on .menu-bar {
+      width: 25px;
+      height: 4px;
+      transform: translateY(7px) rotate(40deg); }
+  html .menu-extended,
+  body .menu-extended {
+    padding: 80px 20px; }
+    html .menu-extended .category,
+    body .menu-extended .category {
+      font-size: 48px; }
+      html .menu-extended .category .number,
+      body .menu-extended .category .number {
+        margin-right: 60px; }
+  html header,
+  body header {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative; }
+    html header .logo,
+    body header .logo {
+      position: absolute;
+      top: 40px;
+      left: 30px;
+      font-size: 40px;
+      transform: translateY(-50%); }
+    html header .header-item,
+    body header .header-item {
+      width: 80%;
+      height: 30vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column; }
+      html header .header-item .face,
+      body header .header-item .face {
+        margin-left: 25%; }
+        html header .header-item .face .main-title,
+        body header .header-item .face .main-title {
+          font-size: 48px;
+          line-height: 48px;
+          font-family: "BebasNeue-Regular";
+          margin: 25% 0; }
+      html header .header-item .text-wrapper,
+      body header .header-item .text-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px; }
+        html header .header-item .text-wrapper h1,
+        body header .header-item .text-wrapper h1 {
+          margin: 0;
+          user-select: none;
+          font-size: 24px; }
+        html header .header-item .text-wrapper p,
+        body header .header-item .text-wrapper p {
+          font-size: 16px;
+          line-height: 20px; }
+        html header .header-item .text-wrapper .dash,
+        body header .header-item .text-wrapper .dash {
+          background-color: black;
+          height: 4px;
+          width: 15px; }
+    html header .header-item:nth-child(1),
+    body header .header-item:nth-child(1) {
+      background-image: url(../assets/images/face.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      height: 60vh;
+      margin-top: 10vh; }
+    html header .middle-crack,
+    body header .middle-crack {
+      position: absolute;
+      height: 120vh;
+      left: unset;
+      right: 0;
+      top: 0;
+      transform: translate(-15%) rotate(180deg);
+      z-index: -1; }
+    html header .number-00,
+    body header .number-00 {
+      position: absolute;
+      top: 35%;
+      right: 25%;
+      font-size: 76px;
+      color: transparent;
+      -webkit-text-stroke: 2px;
+      -webkit-text-stroke-color: black; }
+  html #furia,
+  body #furia {
+    margin: 100px 25px; }
+    html #furia .section-container .img-container,
+    body #furia .section-container .img-container {
+      width: 100%; }
+    html #furia .section-container .furia-txt,
+    body #furia .section-container .furia-txt {
+      width: 70%;
+      text-align-last: right;
+      font-size: 20px;
+      line-height: 24px; }
+      html #furia .section-container .furia-txt.mobile-txt,
+      body #furia .section-container .furia-txt.mobile-txt {
+        display: none; }
+    html #furia .furia,
+    body #furia .furia {
+      position: absolute;
+      bottom: unset;
+      top: 0;
+      left: 0px;
+      font-size: 92px;
+      z-index: -1;
+      transform: rotate(0deg) translateY(-65%); }
+    html #furia .number-01,
+    body #furia .number-01 {
+      top: unset;
+      bottom: 0;
+      right: 0;
+      font-size: 76px;
+      transform: translateY(90%);
+      -webkit-text-stroke: 3px;
+      -webkit-text-stroke-color: rgba(0, 0, 0, 0.25); }
+  html #container,
+  body #container {
+    margin: 100px 25px 0 25px; }
+  html #container .section-container,
+  body #container .section-container {
+    flex-direction: column; }
+    html #container .section-container .big-container,
+    body #container .section-container .big-container {
+      width: 80%; }
+      html #container .section-container .big-container .container-txt,
+      body #container .section-container .big-container .container-txt {
+        width: 100%;
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 0; }
+        html #container .section-container .big-container .container-txt.mobile-txt,
+        body #container .section-container .big-container .container-txt.mobile-txt {
+          display: none; }
+      html #container .section-container .big-container .number-02,
+      body #container .section-container .big-container .number-02 {
+        position: absolute;
+        top: unset;
+        right: 0;
+        bottom: 5%;
+        transform: rotate(90deg) translateY(-50%);
+        font-size: 92px; }
+    html #container .section-container .big-container:nth-child(2),
+    body #container .section-container .big-container:nth-child(2) {
+      margin-top: 50px;
+      width: 100%; }
+      html #container .section-container .big-container:nth-child(2) .letters-container,
+      body #container .section-container .big-container:nth-child(2) .letters-container {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-size: 92px;
+        bottom: 20%;
+        transform: translateY(50%); }
+        html #container .section-container .big-container:nth-child(2) .letters-container .letters,
+        body #container .section-container .big-container:nth-child(2) .letters-container .letters {
+          position: relative;
+          font-size: 92px;
+          height: 200px; }
+          html #container .section-container .big-container:nth-child(2) .letters-container .letters .container1,
+          body #container .section-container .big-container:nth-child(2) .letters-container .letters .container1 {
+            -webkit-text-stroke: 3px;
+            -webkit-text-stroke-color: black; }
+          html #container .section-container .big-container:nth-child(2) .letters-container .letters .dash,
+          body #container .section-container .big-container:nth-child(2) .letters-container .letters .dash {
+            bottom: unset;
+            top: 60%;
+            right: 7.5%;
+            height: 10px;
+            width: 50px; }
+  html #dimension,
+  body #dimension {
+    margin: 25px; }
+    html #dimension .section-container,
+    body #dimension .section-container {
+      flex-direction: column-reverse; }
+      html #dimension .section-container .big-container,
+      body #dimension .section-container .big-container {
+        width: 100%; }
+        html #dimension .section-container .big-container .number-03,
+        body #dimension .section-container .big-container .number-03 {
+          transform: translate(-90%, 0%) rotate(-90deg);
+          bottom: unset;
+          top: 0;
+          right: unset;
+          left: 0;
+          font-size: 92px;
+          -webkit-text-stroke: 3px;
+          -webkit-text-stroke-color: rgba(0, 0, 0, 0.75); }
+        html #dimension .section-container .big-container .dimension-txt,
+        body #dimension .section-container .big-container .dimension-txt {
+          width: 100%;
+          font-size: 20px;
+          line-height: 24px; }
+          html #dimension .section-container .big-container .dimension-txt.mobile-txt,
+          body #dimension .section-container .big-container .dimension-txt.mobile-txt {
+            display: none; }
+        html #dimension .section-container .big-container .img-static,
+        body #dimension .section-container .big-container .img-static {
+          z-index: -2; }
+          html #dimension .section-container .big-container .img-static .dimension-letters,
+          body #dimension .section-container .big-container .img-static .dimension-letters {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 92px; }
+      html #dimension .section-container .big-container:nth-child(2),
+      body #dimension .section-container .big-container:nth-child(2) {
+        width: 80%;
+        align-self: flex-end; }
+  html #jewelry,
+  body #jewelry {
+    margin: 50px 25px; }
+    html #jewelry .crack-jewelry,
+    body #jewelry .crack-jewelry {
+      top: -150px; }
+    html #jewelry .section-container,
+    body #jewelry .section-container {
+      width: 100%;
+      flex-direction: column-reverse; }
+      html #jewelry .section-container .big-container,
+      body #jewelry .section-container .big-container {
+        width: 100%;
+        margin-top: 50px; }
+        html #jewelry .section-container .big-container .jewelry-letters,
+        body #jewelry .section-container .big-container .jewelry-letters {
+          font-size: 92px;
+          transform: translate(5%, -150%) rotate(-90deg);
+          bottom: unset;
+          top: 0;
+          z-index: -1; }
+        html #jewelry .section-container .big-container .dash,
+        body #jewelry .section-container .big-container .dash {
+          display: none; }
+        html #jewelry .section-container .big-container .jewelry-content .img-static,
+        body #jewelry .section-container .big-container .jewelry-content .img-static {
+          width: 65%;
+          transform: translateY(0);
+          z-index: -1;
+          position: relative; }
+          html #jewelry .section-container .big-container .jewelry-content .img-static img,
+          body #jewelry .section-container .big-container .jewelry-content .img-static img {
+            width: 100%; }
+          html #jewelry .section-container .big-container .jewelry-content .img-static .number-04,
+          body #jewelry .section-container .big-container .jewelry-content .img-static .number-04 {
+            position: absolute;
+            bottom: unset;
+            top: 0;
+            left: unset;
+            right: 0;
+            transform: translate(110%, -50%);
+            font-size: 76px; }
+        html #jewelry .section-container .big-container .jewelry-content .jewelry-txt,
+        body #jewelry .section-container .big-container .jewelry-content .jewelry-txt {
+          width: 100%;
+          font-size: 20px;
+          line-height: 24px;
+          margin-right: 20px;
+          margin-top: 10px; }
+          html #jewelry .section-container .big-container .jewelry-content .jewelry-txt.mobile-txt,
+          body #jewelry .section-container .big-container .jewelry-content .jewelry-txt.mobile-txt {
+            display: none; }
+      html #jewelry .section-container .big-container:nth-child(2),
+      body #jewelry .section-container .big-container:nth-child(2) {
+        width: 100%;
+        margin-top: 0; }
+  html #fangio,
+  body #fangio {
+    margin: 25px;
+    overflow: visible; }
+    html #fangio .fondo-fangio,
+    body #fangio .fondo-fangio {
+      height: 80%;
+      transform: translate(-35%); }
+    html #fangio .section-container,
+    body #fangio .section-container {
+      width: 100%; }
+      html #fangio .section-container .big-container,
+      body #fangio .section-container .big-container {
+        width: 95%;
+        align-self: flex-end;
+        transform: translate(5%, 50%); }
+        html #fangio .section-container .big-container .fangio-letters,
+        body #fangio .section-container .big-container .fangio-letters {
+          transform: translate(-20%, -140%) rotate(90deg);
+          font-size: 92px; }
+        html #fangio .section-container .big-container .fangio-txt,
+        body #fangio .section-container .big-container .fangio-txt {
+          width: 65%;
+          font-size: 20px;
+          line-height: 24px;
+          margin-right: 20px;
+          margin-top: 10px;
+          position: relative; }
+          html #fangio .section-container .big-container .fangio-txt.mobile-txt,
+          body #fangio .section-container .big-container .fangio-txt.mobile-txt {
+            display: none; }
+      html #fangio .section-container .big-container:nth-child(2),
+      body #fangio .section-container .big-container:nth-child(2) {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse; }
+        html #fangio .section-container .big-container:nth-child(2) .number-05,
+        body #fangio .section-container .big-container:nth-child(2) .number-05 {
+          font-size: 92px;
+          transform: translateY(40%); }
+  html #matrix,
+  body #matrix {
+    margin: 50px 25px 25px 25px; }
+    html #matrix .section-container,
+    body #matrix .section-container {
+      flex-direction: column-reverse; }
+      html #matrix .section-container .big-container,
+      body #matrix .section-container .big-container {
+        width: 80%;
+        align-self: flex-end; }
+        html #matrix .section-container .big-container .number-06,
+        body #matrix .section-container .big-container .number-06 {
+          top: unset;
+          bottom: 10%;
+          left: 0;
+          transform: rotate(-90deg) translateY(-50%);
+          font-size: 92px;
+          z-index: -1; }
+        html #matrix .section-container .big-container .number-06-bis,
+        body #matrix .section-container .big-container .number-06-bis {
+          top: unset;
+          bottom: 10%;
+          left: 0;
+          transform: rotate(-90deg) translateY(-50%);
+          font-size: 92px; }
+        html #matrix .section-container .big-container .matrix-txt,
+        body #matrix .section-container .big-container .matrix-txt {
+          width: 100%;
+          font-size: 20px;
+          line-height: 24px; }
+          html #matrix .section-container .big-container .matrix-txt.mobile-txt,
+          body #matrix .section-container .big-container .matrix-txt.mobile-txt {
+            display: none; }
+      html #matrix .section-container .big-container:nth-child(1),
+      body #matrix .section-container .big-container:nth-child(1) {
+        width: 95%;
+        align-self: flex-start;
+        margin-top: 100px; }
+        html #matrix .section-container .big-container:nth-child(1) .letters-matrix,
+        body #matrix .section-container .big-container:nth-child(1) .letters-matrix {
+          transform: translateY(-100%); }
+          html #matrix .section-container .big-container:nth-child(1) .letters-matrix .letters,
+          body #matrix .section-container .big-container:nth-child(1) .letters-matrix .letters {
+            font-size: 92px;
+            height: 100px; }
+            html #matrix .section-container .big-container:nth-child(1) .letters-matrix .letters .matrix1,
+            body #matrix .section-container .big-container:nth-child(1) .letters-matrix .letters .matrix1 {
+              -webkit-text-stroke: 3px;
+              -webkit-text-stroke-color: black; }
+            html #matrix .section-container .big-container:nth-child(1) .letters-matrix .letters .dash,
+            body #matrix .section-container .big-container:nth-child(1) .letters-matrix .letters .dash {
+              top: 30%;
+              left: unset;
+              right: 0%;
+              width: 40px;
+              height: 10px; }
+  html #museum,
+  body #museum {
+    margin: 25px 25px 0 25px; }
+    html #museum .section-container,
+    body #museum .section-container {
+      flex-direction: column; }
+      html #museum .section-container .big-container,
+      body #museum .section-container .big-container {
+        width: 80%;
+        margin-bottom: 50px; }
+        html #museum .section-container .big-container .museum-txt,
+        body #museum .section-container .big-container .museum-txt {
+          width: 100%;
+          font-size: 20px;
+          line-height: 24px;
+          margin-top: 22.5%; }
+          html #museum .section-container .big-container .museum-txt.mobile-txt,
+          body #museum .section-container .big-container .museum-txt.mobile-txt {
+            display: none; }
+        html #museum .section-container .big-container .number-07,
+        body #museum .section-container .big-container .number-07 {
+          font-size: 92px; }
+      html #museum .section-container .big-container:nth-child(2),
+      body #museum .section-container .big-container:nth-child(2) {
+        width: 100%;
+        margin: 0; }
+        html #museum .section-container .big-container:nth-child(2) .letters-wrapper,
+        body #museum .section-container .big-container:nth-child(2) .letters-wrapper {
+          margin-top: 0; }
+          html #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum .letter,
+          body #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum .letter {
+            font-size: 112px;
+            line-height: 80px; }
+  html #contact,
+  body #contact {
+    height: 100vh;
+    margin-top: -10px; }
+    html #contact .contact-container,
+    body #contact .contact-container {
+      position: relative;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-style: italic;
+      font-family: "Tw-Cen-Mt-Italic";
+      padding: 30px;
+      background-image: url(../assets/images/brackets.png);
+      background-size: contain;
+      background-position-y: center;
+      background-repeat: no-repeat;
+      z-index: 3; }
+      html #contact .contact-container a,
+      body #contact .contact-container a {
+        color: white;
+        text-decoration: none;
+        cursor: none; }
+    html #contact img,
+    body #contact img {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      z-index: 1; } }
 
 /*# sourceMappingURL=index.css.map */
