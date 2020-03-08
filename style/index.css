@@ -1,11 +1,11 @@
 /* FONTS */
 @font-face {
   font-family: "BebasNeue-Regular";
-  src: url("../assets/fonts/BebasNeue-Regular.ttf");
+  src: url("../assets/fonts/BebasNeue-Regular.ttf"), url("../assets/fonts/BebasNeue-Regular.ttf") format("truetype");
   font-style: normal; }
 @font-face {
   font-family: "Tw-Cen-Mt-Italic";
-  src: url("../assets/fonts/tw-cen-mt-italic.ttf");
+  src: url("../assets/fonts/tw-cen-mt-italic.ttf"), url("../assets/fonts/tw-cen-mt-italic.ttf") format("truetype");
   font-style: italic; }
 /* STYLES */
 *,
