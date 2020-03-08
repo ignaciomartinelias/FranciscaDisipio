@@ -3109,12 +3109,17 @@ body {
         .big-container:nth-child(2) {
           width: 100%;
           margin-left: auto;
-          img {
-            width: 100%;
-          }
           .letters-wrapper {
             margin-top: 0;
-            max-height: 250px;
+            .img-container {
+              img {
+                width: 100%;
+              }
+              .img-static {
+                width: 100%;
+                object-fit: fill;
+              }
+            }
             .letters-museum {
               .letter {
                 font-size: 112px;
