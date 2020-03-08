@@ -2556,18 +2556,30 @@ body {
     // MENU TOGGLER
     .menu {
       transform: translate(50%, -50%);
+      -webkit-transform: translate(50%, -50%);
       top: 40px;
       right: 30px;
+      transition-property: background-color;
+      transition-duration: 0.1s;
+      -webkit-transition-property: background-color;
+      -webkit-transition-duration: 0.1s;
+
       .menu-bar {
         height: 3px;
         width: 20px;
         margin-bottom: 4px;
+
+        transition-property: background-color, transform;
+        transition-duration: 0.5s, 1s;
+        -webkit-transition-property: background-color, transform;
+        -webkit-transition-duration: 0.5s, 1s;
       }
       &.toggle-on {
         .menu-bar {
           width: 25px;
           height: 4px;
           transform: translateY(7px) rotate(40deg);
+          -webkit-transform: translateY(7px) rotate(40deg);
         }
       }
     }
@@ -2575,13 +2587,103 @@ body {
     // MENU EXTENDED
     .menu-extended {
       padding: 80px 20px;
+
+      transform: translate(100%, 0);
+      -webkit-transform: translate(100%, 0);
+      opacity: 0.5;
+      transition-property: transform, opacity;
+      transition-duration: 0.5s, 0.5s;
+      transition-timing-function: ease-in-out;
+  
+      -webkit-transform: translate(100%, 0);
+      -webkit-transition-property: transform, opacity;
+      -webkit-transition-duration: 0.5s, 0.5s;
+      -webkit-transition-timing-function: ease-in-out;
+
       .category {
         font-size: 48px;
+        transform: translate(100%, 0);
+
+        transition-property: transform, opacity;
+        transition-duration: 0.5s, 0.5s;
+        transition-timing-function: ease-in-out;
+  
+        -webkit-transform: translate(100%, 0);
+  
+        -webkit-transition-property: transform, opacity;
+        -webkit-transition-duration: 0.5s, 0.5s;
+        -webkit-transition-timing-function: ease-in-out;
+  
+        &.appear-in {
+          opacity: 1;
+          transform: translate(0, 0);
+          transition-property: transform, opacity;
+          transition-duration: 0.5s, 0.5s;
+          transition-timing-function: ease-in-out;
+  
+          -webkit-transform: translate(0, 0);
+          -webkit-transition-property: transform, opacity;
+          -webkit-transition-duration: 0.5s, 0.5s;
+          -webkit-transition-timing-function: ease-in-out;
+  
+          &:hover .category-name:after {
+            opacity: 1;
+            transform: scale(1);
+            -webkit-transform: scale(1);
+          }
+        }
+
+        .category-name {
+          transition: opacity 0.5s, transform 0.5s;
+          -webkit-transition: opacity 0.5s, transform 0.5s;
+          transform: scale(0, 1);
+          -webkit-transform: scale(0, 1);
+        }
         .number {
           margin-right: 60px;
         }
       }
+
+      &.toggle-on {
+        opacity: 1;
+        transform: translate(0, 0);
+        -webkit-transform: translate(0,0);
+  
+        transition-property: transform, opacity;
+        transition-duration: 0.5s, 0.5s;
+        transition-timing-function: ease-in-out;
+  
+        -webkit-transition-property: transform, opacity;
+        -webkit-transition-duration: 0.5s, 0.5s;
+        -webkit-transition-timing-function: ease-in-out;
+      }
     }
+
+      // IMAGE ANIMATION
+
+  .img-container {
+    overflow: hidden;
+    .image-back {
+      filter: blur(10px);
+      transform: translateX(50%) scaleX(2);
+      -webkit-transform: translateX(50%) scaleX(2);
+      transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out,
+        transform 0.5s ease-in-out;
+        -webkit-transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out,
+        transform 0.5s ease-in-out;
+
+      &.image-highlight {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) scaleX(1);
+        -webkit-transform: translateX(0) scaleX(1);
+        transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out,
+          transform 0.5s ease-in-out;
+          -webkit-transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out,
+          transform 0.5s ease-in-out;
+      }
+    }
+  }
 
     // HERO SECTION
     header {
