@@ -103,14 +103,16 @@ categories.forEach((category) => {
         customCursor.classList.remove('toggle-on');
 
         const distanceY = sections[index].offsetTop - 75;
-        
+
         if(window.innerWidth > 700) {
             window.scroll({
                 top: distanceY,
                 behavior: 'smooth'
             });
         } else {
-            window.scrollTo(0, distanceY);
+            setTimeout(()=> {
+                window.scrollTo(0, distanceY);
+            }, 250);
         }        
 
     })
@@ -200,7 +202,7 @@ moreDetailsButtons.forEach(button => {
         const array = Array.from(moreDetailsButtons);
         const bla = event.target;
         menuToggler.classList.add("hide");
-        setTimeout(()=> {
+        setTimeout(() => {
             projects.item(array.indexOf(bla)).classList.add('appear-in');
         }, 250)
     })
@@ -211,11 +213,11 @@ closeInDetails.addEventListener('click', () => {
     closeInDetails.classList.remove('toggle-on');
     customCursor.classList.remove('toggle-on');
     projects.forEach(project => {
-        if(project.classList.contains('appear-in')){
+        if (project.classList.contains('appear-in')) {
             project.classList.remove("appear-in");
         }
     })
-    setTimeout(()=> {
+    setTimeout(() => {
         menuToggler.classList.remove("hide");
     }, 500)
 })
