@@ -104,19 +104,15 @@ categories.forEach((category) => {
 
         const distanceY = sections[index].offsetTop - 75;
 
-        // if(window.innerWidth > 700) {
-        //     window.scroll({
-        //         top: distanceY,
-        //         behavior: 'smooth'
-        //     });
-        // } else {
-        //     setTimeout(()=> {
-        //         window.scrollTo(0, distanceY);
-        //     }, 250);
-        // }        
-
-        scroll.animateScroll(distanceY, { speed: 250, speedAsDuration: true, easing: 'linear' });
-
+        if (window.innerWidth > 700) {
+            window.scroll({
+                top: distanceY,
+                behavior: 'smooth'
+            });
+        } else {
+            scroll.animateScroll(distanceY, { speed: 250, speedAsDuration: true, easing: 'linear' });
+        }
+        
     })
 })
 
