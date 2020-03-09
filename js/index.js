@@ -103,11 +103,15 @@ categories.forEach((category) => {
         customCursor.classList.remove('toggle-on');
 
         const distanceY = sections[index].offsetTop - 75;
-
-        window.scroll({
-            top: distanceY,
-            behavior: 'smooth'
-        });
+        
+        if(window.innerWidth > 700) {
+            window.scroll({
+                top: distanceY,
+                behavior: 'smooth'
+            });
+        } else {
+            window.scroll(0, distanceY);
+        }        
 
     })
 })
@@ -186,7 +190,7 @@ document.addEventListener('mouseover', () => {
 
 // Expand Information Project Animation
 
-// Menu Toggler and Menu Expanded Animation
+// Project Details Animation
 
 moreDetailsButtons.forEach(button => {
     button.addEventListener("click", () => {

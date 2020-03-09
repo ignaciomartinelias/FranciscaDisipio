@@ -2576,7 +2576,7 @@ body {
       width: 100vw;
       height: 100vh;
       background: black;
-      z-index: 9;
+      z-index: 3;
       padding: 50px;
       display: flex;
       justify-content: center;
@@ -2654,6 +2654,7 @@ body {
         -webkit-transition-property: transform, opacity;
         -webkit-transition-duration: 0.5s, 0.5s;
         -webkit-transition-timing-function: ease-in-out;
+        z-index: -2;
 
         h2 {
           font-size: 42px;
@@ -2679,6 +2680,7 @@ body {
       }
 
       &.toggle-on {
+        z-index: 9;
         opacity: 1;
         transform: translate(0, 0);
         -webkit-transform: translate(0, 0);
@@ -3189,6 +3191,7 @@ body {
       .section-container {
         width: 100%;
         .big-container {
+          z-index: 2;
           width: 95%;
           align-self: flex-end;
           transform: translate(5%, 50%);
@@ -3243,6 +3246,15 @@ body {
           align-self: flex-end;
           position: relative;
           .mobile-expand {
+            position: absolute;
+            display: inline-block;
+            top: -70px;
+            right: 60px;
+            width: 30px;
+            color: black;
+            z-index: 7;
+          }
+          .mobile-expand:nth-child(2) {
             position: absolute;
             display: inline-block;
             top: 30px;
