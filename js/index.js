@@ -110,7 +110,7 @@ categories.forEach((category) => {
                 behavior: 'smooth'
             });
         } else {
-            window.scroll(0, distanceY);
+            window.scrollTo(0, distanceY);
         }        
 
     })
