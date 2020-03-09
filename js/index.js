@@ -6,15 +6,19 @@ const menuExtended = document.querySelector('.menu-extended');
 const categories = document.querySelectorAll('.menu-extended .category');
 const customCursor = document.querySelector('.custom-cursor');
 
+const moreDetailsButtons = document.querySelectorAll('.mobile-expand');
+const mobileExpanded = document.querySelector('.mobile-expanded');
+const closeInDetails = document.querySelector('.mobile-expanded .menu');
+const projects = document.querySelectorAll('.mobile-expanded .category');
+
 // Click Animation on Image Wrappers
-console.log("bla");
 imgWrappers.forEach(imgWrapper => {
 
     // Adding Arrows to Image Wrappers
     const backArrow = document.createElement('img');
     const nextArrow = document.createElement('img');
-    backArrow.setAttribute('src', '/FranciscaDisipio/assets/images/back-arrow.svg');
-    nextArrow.setAttribute('src', '/FranciscaDisipio/assets/images/next-arrow.svg');
+    backArrow.setAttribute('src', '../assets/images/back-arrow.svg');
+    nextArrow.setAttribute('src', '../assets/images/next-arrow.svg');
     backArrow.classList.add('back-arrow');
     backArrow.classList.add('arrow');
     nextArrow.classList.add('next-arrow');
@@ -170,15 +174,44 @@ document.body.addEventListener('click', () => {
 // Cursor leave window 
 
 document.addEventListener('mouseout', () => {
-    if(!customCursor.classList.contains('hover')) {
+    if (!customCursor.classList.contains('hover')) {
         customCursor.classList.add('dissapear');
     }
 });
 document.addEventListener('mouseover', () => {
-    if(!customCursor.classList.contains('hover')) {
+    if (!customCursor.classList.contains('hover')) {
         customCursor.classList.remove('dissapear');
     }
 });
 
-// Scroll into view animation
+// Expand Information Project Animation
 
+// Menu Toggler and Menu Expanded Animation
+
+moreDetailsButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        mobileExpanded.classList.add('toggle-on');
+        closeInDetails.classList.add('toggle-on');
+        customCursor.classList.add('toggle-on');
+        const array = Array.from(moreDetailsButtons);
+        const bla = event.target;
+        menuToggler.classList.add("hide");
+        setTimeout(()=> {
+            projects.item(array.indexOf(bla)).classList.add('appear-in');
+        }, 250)
+    })
+})
+
+closeInDetails.addEventListener('click', () => {
+    mobileExpanded.classList.remove('toggle-on');
+    closeInDetails.classList.remove('toggle-on');
+    customCursor.classList.remove('toggle-on');
+    projects.forEach(project => {
+        if(project.classList.contains('appear-in')){
+            project.classList.remove("appear-in");
+        }
+    })
+    setTimeout(()=> {
+        menuToggler.classList.remove("hide");
+    }, 500)
+})

@@ -4,7 +4,7 @@
   src: url("../assets/fonts/BebasNeue-Regular.ttf"), url("../assets/fonts/BebasNeue-Regular.ttf") format("truetype");
   font-style: normal; }
 @font-face {
-  font-family: 'TwCenMtItalic';
+  font-family: "TwCenMtItalic";
   src: url("../assets/fonts/TwCenMT-Italic.eot");
   /* IE9+ Compat Modes */
   src: url("../assets/fonts/TwCenMT-Italic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/TwCenMT-Italic.woff2") format("woff2"), url("../assets/fonts/TwCenMT-Italic.woff") format("woff"), url("../assets/fonts/TwCenMT-Italic.ttf") format("truetype"), url("../assets/fonts/TwCenMT-Italic.svg") format("svg");
@@ -39,6 +39,9 @@ body {
     position: relative;
     margin: 200px 50px;
     box-sizing: border-box; }
+  html .mobile-expand,
+  body .mobile-expand {
+    display: none; }
   html .custom-cursor,
   body .custom-cursor {
     position: absolute;
@@ -251,6 +254,9 @@ body {
       -webkit-transition-property: transform, opacity;
       -webkit-transition-duration: 0.5s, 0.5s;
       -webkit-transition-timing-function: ease-in-out; }
+  html .mobile-expanded,
+  body .mobile-expanded {
+    display: none; }
   html .back-arrow,
   body .back-arrow {
     position: absolute;
@@ -1993,6 +1999,115 @@ body {
       left: 0;
       z-index: 1; } }
 @media (max-width: 450px) {
+  html .mobile-expanded,
+  body .mobile-expanded {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 9;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%, 0);
+    -webkit-transform: translate(100%, 0);
+    opacity: 0.5;
+    transition-property: transform, opacity;
+    transition-duration: 0.5s, 0.5s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-property: transform, opacity;
+    -webkit-transition-duration: 0.5s, 0.5s;
+    -webkit-transition-timing-function: ease-in-out; }
+    html .mobile-expanded .menu,
+    body .mobile-expanded .menu {
+      transform: translate(50%, -50%);
+      -webkit-transform: translate(50%, -50%);
+      top: 40px;
+      right: 30px;
+      transition-property: background-color;
+      transition-duration: 0.1s;
+      -webkit-transition-property: background-color;
+      -webkit-transition-duration: 0.1s; }
+      html .mobile-expanded .menu .menu-bar,
+      body .mobile-expanded .menu .menu-bar {
+        height: 3px;
+        width: 20px;
+        margin-bottom: 4px;
+        opacity: 0;
+        transition-property: background-color, transform;
+        transition-duration: 0.5s, 1s;
+        -webkit-transition-property: background-color, transform;
+        -webkit-transition-duration: 0.5s, 1s; }
+      html .mobile-expanded .menu.toggle-on .menu-bar,
+      body .mobile-expanded .menu.toggle-on .menu-bar {
+        opacity: 1;
+        width: 25px;
+        height: 4px;
+        transform: translateY(7px) rotate(40deg);
+        -webkit-transform: translateY(7px) rotate(40deg); }
+        html .mobile-expanded .menu.toggle-on .menu-bar:nth-child(2),
+        body .mobile-expanded .menu.toggle-on .menu-bar:nth-child(2) {
+          opacity: 0; }
+    html .mobile-expanded .category-container,
+    body .mobile-expanded .category-container {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row; }
+    html .mobile-expanded .category,
+    body .mobile-expanded .category {
+      position: absolute;
+      color: white;
+      font-size: 60px;
+      width: fit-content;
+      opacity: 0;
+      transform: translate(-100%, 0);
+      -webkit-transform: translate(-100%, 0);
+      transition-property: transform, opacity;
+      transition-duration: 0.5s, 0.5s;
+      transition-timing-function: ease-in-out;
+      -webkit-transition-property: transform, opacity;
+      -webkit-transition-duration: 0.5s, 0.5s;
+      -webkit-transition-timing-function: ease-in-out; }
+      html .mobile-expanded .category h2,
+      body .mobile-expanded .category h2 {
+        font-size: 42px; }
+      html .mobile-expanded .category p,
+      body .mobile-expanded .category p {
+        text-align-last: right; }
+      html .mobile-expanded .category.appear-in,
+      body .mobile-expanded .category.appear-in {
+        position: absolute;
+        opacity: 1;
+        transform: translate(0%, 0%);
+        transition-property: transform, opacity;
+        transition-duration: 0.5s, 0.5s;
+        transition-timing-function: ease-in-out;
+        -webkit-transform: translate(0%, 0%);
+        -webkit-transition-property: transform, opacity;
+        -webkit-transition-duration: 0.5s, 0.5s;
+        -webkit-transition-timing-function: ease-in-out; }
+    html .mobile-expanded.toggle-on,
+    body .mobile-expanded.toggle-on {
+      opacity: 1;
+      transform: translate(0, 0);
+      -webkit-transform: translate(0, 0);
+      transition-property: transform, opacity;
+      transition-duration: 0.5s, 0.5s;
+      transition-timing-function: ease-in-out;
+      -webkit-transition-property: transform, opacity;
+      -webkit-transition-duration: 0.5s, 0.5s;
+      -webkit-transition-timing-function: ease-in-out; }
+      html .mobile-expanded.toggle-on .category-container,
+      body .mobile-expanded.toggle-on .category-container {
+        opacity: 1; }
   html .menu,
   body .menu {
     transform: translate(50%, -50%);
@@ -2018,6 +2133,13 @@ body {
       height: 4px;
       transform: translateY(7px) rotate(40deg);
       -webkit-transform: translateY(7px) rotate(40deg); }
+      html .menu.toggle-on .menu-bar:nth-child(3),
+      body .menu.toggle-on .menu-bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-40deg);
+        -webkit-transform: translateY(-9px) rotate(-40deg); }
+    html .menu.hide,
+    body .menu.hide {
+      display: none; }
   html .menu-extended,
   body .menu-extended {
     padding: 80px 20px;
@@ -2182,19 +2304,31 @@ body {
       -webkit-text-stroke-color: black; }
   html #furia,
   body #furia {
-    margin: 100px 25px; }
-    html #furia .section-container .img-container,
-    body #furia .section-container .img-container {
-      width: 100%; }
-    html #furia .section-container .furia-txt,
-    body #furia .section-container .furia-txt {
-      width: 70%;
-      text-align-last: right;
-      font-size: 20px;
-      line-height: 24px; }
-      html #furia .section-container .furia-txt.mobile-txt,
-      body #furia .section-container .furia-txt.mobile-txt {
-        display: none; }
+    margin: 125px 25px 100px 25px; }
+    html #furia .section-container,
+    body #furia .section-container {
+      position: relative; }
+      html #furia .section-container .mobile-expand,
+      body #furia .section-container .mobile-expand {
+        position: absolute;
+        display: inline-block;
+        top: -40px;
+        right: 75px;
+        width: 30px;
+        color: black;
+        z-index: 7; }
+      html #furia .section-container .img-container,
+      body #furia .section-container .img-container {
+        width: 100%; }
+      html #furia .section-container .furia-txt,
+      body #furia .section-container .furia-txt {
+        width: 70%;
+        text-align-last: right;
+        font-size: 20px;
+        line-height: 24px; }
+        html #furia .section-container .furia-txt.mobile-txt,
+        body #furia .section-container .furia-txt.mobile-txt {
+          display: none; }
     html #furia .furia,
     body #furia .furia {
       position: absolute;
@@ -2221,7 +2355,17 @@ body {
     flex-direction: column; }
     html #container .section-container .big-container,
     body #container .section-container .big-container {
-      width: 80%; }
+      width: 80%;
+      position: relative; }
+      html #container .section-container .big-container .mobile-expand,
+      body #container .section-container .big-container .mobile-expand {
+        position: absolute;
+        display: inline-block;
+        top: 20px;
+        right: -50px;
+        width: 30px;
+        color: black;
+        z-index: 7; }
       html #container .section-container .big-container .container-txt,
       body #container .section-container .big-container .container-txt {
         width: 100%;
@@ -2241,7 +2385,7 @@ body {
         font-size: 92px; }
     html #container .section-container .big-container:nth-child(2),
     body #container .section-container .big-container:nth-child(2) {
-      margin-top: 50px;
+      margin-top: 25px;
       width: 100%; }
       html #container .section-container .big-container:nth-child(2) .letters-container,
       body #container .section-container .big-container:nth-child(2) .letters-container {
@@ -2307,10 +2451,20 @@ body {
       html #dimension .section-container .big-container:nth-child(2),
       body #dimension .section-container .big-container:nth-child(2) {
         width: 80%;
-        align-self: flex-end; }
+        align-self: flex-end;
+        position: relative; }
+        html #dimension .section-container .big-container:nth-child(2) .mobile-expand,
+        body #dimension .section-container .big-container:nth-child(2) .mobile-expand {
+          position: absolute;
+          display: inline-block;
+          bottom: 75px;
+          left: -50px;
+          width: 30px;
+          color: black;
+          z-index: 7; }
   html #jewelry,
   body #jewelry {
-    margin: 50px 25px; }
+    margin: 75px 25px 50px 25px; }
     html #jewelry .crack-jewelry,
     body #jewelry .crack-jewelry {
       top: -150px; }
@@ -2345,7 +2499,7 @@ body {
           body #jewelry .section-container .big-container .jewelry-content .img-static .number-04 {
             position: absolute;
             bottom: unset;
-            top: 0;
+            top: 50px;
             left: unset;
             right: 0;
             transform: translate(110%, -50%);
@@ -2363,10 +2517,20 @@ body {
       html #jewelry .section-container .big-container:nth-child(2),
       body #jewelry .section-container .big-container:nth-child(2) {
         width: 100%;
-        margin-top: 0; }
+        margin-top: 0;
+        position: relative; }
+        html #jewelry .section-container .big-container:nth-child(2) .mobile-expand,
+        body #jewelry .section-container .big-container:nth-child(2) .mobile-expand {
+          position: absolute;
+          display: inline-block;
+          bottom: -40px;
+          left: 0px;
+          width: 30px;
+          color: black;
+          z-index: 7; }
   html #fangio,
   body #fangio {
-    margin: 25px;
+    margin: 75px 25px 25px 25px;
     overflow: visible; }
     html #fangio .fondo-fangio,
     body #fangio .fondo-fangio {
@@ -2399,21 +2563,42 @@ body {
       body #fangio .section-container .big-container:nth-child(2) {
         width: 100%;
         display: flex;
-        flex-direction: column-reverse; }
+        flex-direction: column-reverse;
+        z-index: -2;
+        position: relative; }
         html #fangio .section-container .big-container:nth-child(2) .number-05,
         body #fangio .section-container .big-container:nth-child(2) .number-05 {
           font-size: 92px;
-          transform: translateY(40%); }
+          transform: translateY(0%); }
+        html #fangio .section-container .big-container:nth-child(2) .mobile-expand,
+        body #fangio .section-container .big-container:nth-child(2) .mobile-expand {
+          position: absolute;
+          display: inline-block;
+          bottom: 30px;
+          right: 65px;
+          width: 30px;
+          color: black;
+          z-index: 7; }
   html #matrix,
   body #matrix {
-    margin: 50px 25px 25px 25px; }
+    margin: 25px 25px 25px 25px; }
     html #matrix .section-container,
     body #matrix .section-container {
       flex-direction: column-reverse; }
       html #matrix .section-container .big-container,
       body #matrix .section-container .big-container {
         width: 80%;
-        align-self: flex-end; }
+        align-self: flex-end;
+        position: relative; }
+        html #matrix .section-container .big-container .mobile-expand,
+        body #matrix .section-container .big-container .mobile-expand {
+          position: absolute;
+          display: inline-block;
+          top: 30px;
+          left: -50px;
+          width: 30px;
+          color: black;
+          z-index: 7; }
         html #matrix .section-container .big-container .number-06,
         body #matrix .section-container .big-container .number-06 {
           top: unset;
@@ -2462,14 +2647,24 @@ body {
               height: 10px; }
   html #museum,
   body #museum {
-    margin: 25px 25px 0 25px; }
+    margin: 75px 25px 0 25px; }
     html #museum .section-container,
     body #museum .section-container {
       flex-direction: column; }
       html #museum .section-container .big-container,
       body #museum .section-container .big-container {
         width: 80%;
-        margin-bottom: 50px; }
+        margin-bottom: 50px;
+        position: relative; }
+        html #museum .section-container .big-container .mobile-expand,
+        body #museum .section-container .big-container .mobile-expand {
+          position: absolute;
+          display: inline-block;
+          bottom: 30px;
+          right: -50px;
+          width: 30px;
+          color: black;
+          z-index: 7; }
         html #museum .section-container .big-container .museum-txt,
         body #museum .section-container .big-container .museum-txt {
           width: 100%;
@@ -2491,8 +2686,7 @@ body {
         html #museum .section-container .big-container:nth-child(2) .letters-wrapper,
         body #museum .section-container .big-container:nth-child(2) .letters-wrapper {
           position: relative;
-          margin: 0;
-          margin-bottom: 50px; }
+          margin: 0; }
           html #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum,
           body #museum .section-container .big-container:nth-child(2) .letters-wrapper .letters-museum {
             position: absolute;
@@ -2547,6 +2741,7 @@ body {
       background-image: url(../assets/images/brackets.png);
       background-size: contain;
       background-position-y: center;
+      margin-bottom: 50px;
       background-repeat: no-repeat;
       z-index: 3; }
       html #contact .contact-container a,
