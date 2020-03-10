@@ -2776,7 +2776,7 @@ body {
       width: 100%;
       left: 0;
       z-index: 1; } }
-@media (max-width: 420px) {
+@media (max-width: 400px) {
   html #fangio .section-container .big-container:nth-child(2) .number-05,
   body #fangio .section-container .big-container:nth-child(2) .number-05 {
     font-size: 92px;
