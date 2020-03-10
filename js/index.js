@@ -17,8 +17,8 @@ imgWrappers.forEach(imgWrapper => {
     // Adding Arrows to Image Wrappers
     const backArrow = document.createElement('img');
     const nextArrow = document.createElement('img');
-    backArrow.setAttribute('src', '../assets/images/back-arrow.svg');
-    nextArrow.setAttribute('src', '../assets/images/next-arrow.svg');
+    backArrow.setAttribute('src', '/FranciscaDisipio/assets/images/back-arrow.svg');
+    nextArrow.setAttribute('src', '/FranciscaDisipio/assets/images/next-arrow.svg');
     backArrow.classList.add('back-arrow');
     backArrow.classList.add('arrow');
     nextArrow.classList.add('next-arrow');
@@ -112,7 +112,7 @@ categories.forEach((category) => {
         } else {
             scroll.animateScroll(distanceY, { speed: 250, speedAsDuration: true, easing: 'linear' });
         }
-        
+
     })
 })
 

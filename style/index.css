@@ -267,7 +267,8 @@ body {
     transform: translateY(-50%);
     opacity: 0;
     transition: 0.5s;
-    -webkit-transition: 0.5s; }
+    -webkit-transition: 0.5s;
+    z-index: 6; }
   html .next-arrow,
   body .next-arrow {
     position: absolute;
@@ -278,7 +279,8 @@ body {
     transform: translateY(-50%);
     opacity: 0;
     transition: 0.5s;
-    -webkit-transition: 0.5s; }
+    -webkit-transition: 0.5s;
+    z-index: 6; }
   html .img-container:hover .next-arrow,
   html .img-container:hover .back-arrow,
   body .img-container:hover .next-arrow,
@@ -2068,8 +2070,8 @@ body {
       font-size: 60px;
       width: fit-content;
       opacity: 0;
-      transform: translate(-100%, 0);
-      -webkit-transform: translate(-100%, 0);
+      transform: translate(-300%, 0);
+      -webkit-transform: translate(-300%, 0);
       transition-property: transform, opacity;
       transition-duration: 0.5s, 0.5s;
       transition-timing-function: ease-in-out;
@@ -2089,11 +2091,11 @@ body {
         opacity: 1;
         transform: translate(0%, 0%);
         transition-property: transform, opacity;
-        transition-duration: 0.5s, 0.5s;
+        transition-duration: 1s, 1s;
         transition-timing-function: ease-in-out;
         -webkit-transform: translate(0%, 0%);
         -webkit-transition-property: transform, opacity;
-        -webkit-transition-duration: 0.5s, 0.5s;
+        -webkit-transition-duration: 1s, 1s;
         -webkit-transition-timing-function: ease-in-out; }
     html .mobile-expanded.toggle-on,
     body .mobile-expanded.toggle-on {
