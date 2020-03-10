@@ -936,8 +936,7 @@ body {
           font-size: 172px; }
         html #museum .section-container .big-container .img-container,
         body #museum .section-container .big-container .img-container {
-          position: relative;
-          background-color: white; }
+          position: relative; }
           html #museum .section-container .big-container .img-container img,
           body #museum .section-container .big-container .img-container img {
             width: 100%; }
@@ -2032,30 +2031,34 @@ body {
       transition-property: background-color;
       transition-duration: 0.1s;
       -webkit-transition-property: background-color;
-      -webkit-transition-duration: 0.1s; }
+      -webkit-transition-duration: 0.1s;
+      background-color: transparent; }
       html .mobile-expanded .menu .menu-bar,
       body .mobile-expanded .menu .menu-bar {
         height: 3px;
         width: 20px;
         margin-bottom: 4px;
         opacity: 0;
-        transition-property: background-color, transform;
-        transition-duration: 0.5s, 1s;
-        -webkit-transition-property: background-color, transform;
-        -webkit-transition-duration: 0.5s, 1s; }
+        transition-property: background-color, transform, opacity;
+        transition-duration: 0.5s, 1s, 0.5s;
+        -webkit-transition-property: background-color, transform, opacity;
+        -webkit-transition-duration: 0.5s, 1s, 0.5s; }
       html .mobile-expanded .menu.toggle-on .menu-bar,
       body .mobile-expanded .menu.toggle-on .menu-bar {
         opacity: 1;
         width: 25px;
         height: 4px;
         transform: translateY(7px) rotate(40deg);
-        -webkit-transform: translateY(7px) rotate(40deg); }
+        -webkit-transform: translateY(7px) rotate(40deg);
+        transition-property: background-color, transform, opacity;
+        transition-duration: 0.5s, 1s, 0.5s;
+        -webkit-transition-property: background-color, transform, opacity;
+        -webkit-transition-duration: 0.5s, 1s, 0.5s; }
         html .mobile-expanded .menu.toggle-on .menu-bar:nth-child(2),
         body .mobile-expanded .menu.toggle-on .menu-bar:nth-child(2) {
           opacity: 0; }
     html .mobile-expanded .category-container,
     body .mobile-expanded .category-container {
-      opacity: 0;
       width: 100%;
       height: 100%;
       position: relative;
@@ -2079,6 +2082,9 @@ body {
       -webkit-transition-duration: 0.5s, 0.5s;
       -webkit-transition-timing-function: ease-in-out;
       z-index: -2; }
+      html .mobile-expanded .category.appear-in.mid-animation,
+      body .mobile-expanded .category.appear-in.mid-animation {
+        opacity: 0; }
       html .mobile-expanded .category h2,
       body .mobile-expanded .category h2 {
         font-size: 42px; }
@@ -2109,19 +2115,16 @@ body {
       -webkit-transition-property: transform, opacity;
       -webkit-transition-duration: 0.5s, 0.5s;
       -webkit-transition-timing-function: ease-in-out; }
-      html .mobile-expanded.toggle-on .category-container,
-      body .mobile-expanded.toggle-on .category-container {
-        opacity: 1; }
   html .menu,
   body .menu {
     transform: translate(50%, -50%);
     -webkit-transform: translate(50%, -50%);
     top: 40px;
     right: 30px;
-    transition-property: background-color;
-    transition-duration: 0.1s;
-    -webkit-transition-property: background-color;
-    -webkit-transition-duration: 0.1s; }
+    transition-property: background-color, opacity, right;
+    transition-duration: 0.1s, 0.5s, 0.5s;
+    -webkit-transition-property: background-color, opacity, right;
+    -webkit-transition-duration: 0.1s, 0.5s, 0.5s; }
     html .menu .menu-bar,
     body .menu .menu-bar {
       height: 3px;
@@ -2143,7 +2146,10 @@ body {
         -webkit-transform: translateY(-9px) rotate(-40deg); }
     html .menu.hide,
     body .menu.hide {
-      display: none; }
+      right: -50px;
+      opacity: 0;
+      transition: right 0.5s;
+      -webkit-transition: right 0.5s; }
   html .menu-extended,
   body .menu-extended {
     padding: 80px 20px;
@@ -2574,7 +2580,7 @@ body {
         html #fangio .section-container .big-container:nth-child(2) .number-05,
         body #fangio .section-container .big-container:nth-child(2) .number-05 {
           font-size: 92px;
-          transform: translateY(0%); }
+          transform: translateY(15%); }
         html #fangio .section-container .big-container:nth-child(2) .mobile-expand,
         body #fangio .section-container .big-container:nth-child(2) .mobile-expand {
           position: absolute;
@@ -2599,7 +2605,7 @@ body {
         body #matrix .section-container .big-container .mobile-expand {
           position: absolute;
           display: inline-block;
-          top: -70px;
+          top: -60px;
           right: 60px;
           width: 30px;
           color: black;
@@ -2770,5 +2776,29 @@ body {
       width: 100%;
       left: 0;
       z-index: 1; } }
+@media (max-width: 420px) {
+  html #fangio .section-container .big-container:nth-child(2) .number-05,
+  body #fangio .section-container .big-container:nth-child(2) .number-05 {
+    font-size: 92px;
+    transform: translateY(0%); }
+
+  html #matrix .section-container .big-container .mobile-expand,
+  body #matrix .section-container .big-container .mobile-expand {
+    position: absolute;
+    display: inline-block;
+    top: -70px;
+    right: 60px;
+    width: 30px;
+    color: black;
+    z-index: 7; } }
+@media (max-width: 380px) {
+  html #container .section-container .big-container .letters-container .letters .container1,
+  html #container .section-container .big-container .letters-container .letters .container2,
+  body #container .section-container .big-container .letters-container .letters .container1,
+  body #container .section-container .big-container .letters-container .letters .container2 {
+    font-size: 84px; }
+  html #dimension .section-container .big-container .img-static .dimension-letters,
+  body #dimension .section-container .big-container .img-static .dimension-letters {
+    font-size: 84px; } }
 
 /*# sourceMappingURL=index.css.map */

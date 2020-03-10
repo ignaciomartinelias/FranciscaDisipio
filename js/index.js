@@ -212,10 +212,18 @@ closeInDetails.addEventListener('click', () => {
     customCursor.classList.remove('toggle-on');
     projects.forEach(project => {
         if (project.classList.contains('appear-in')) {
-            project.classList.remove("appear-in");
+            project.classList.add("mid-animation");
         }
     })
+
+
     setTimeout(() => {
         menuToggler.classList.remove("hide");
-    }, 500)
+        projects.forEach(project => {
+            if (project.classList.contains('appear-in')) {
+                project.classList.remove("appear-in");
+                project.classList.remove("mid-animation");
+            }
+        })
+    }, 1000)
 })
