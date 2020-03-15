@@ -2800,5 +2800,196 @@ body {
   html #dimension .section-container .big-container .img-static .dimension-letters,
   body #dimension .section-container .big-container .img-static .dimension-letters {
     font-size: 84px; } }
+@media (max-width: 350px) {
+  html header .logo,
+  body header .logo {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    font-size: 30px;
+    transform: translateY(-50%); }
+
+  html header .header-item .face .main-title,
+  body header .header-item .face .main-title {
+    font-size: 38px;
+    line-height: 38px;
+    font-family: "BebasNeue-Regular";
+    margin: 25% 0; }
+
+  html header .header-item .text-wrapper,
+  body header .header-item .text-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px; }
+
+  html header .middle-crack,
+  body header .middle-crack {
+    position: absolute;
+    height: 140vh;
+    left: unset;
+    right: -25px;
+    top: 0;
+    transform: translate(-15%) rotate(180deg);
+    z-index: -1; }
+
+  html #furia,
+  body #furia {
+    margin: 175px 25px 100px 25px; }
+
+  html #furia .number-01,
+  body #furia .number-01 {
+    top: unset;
+    bottom: 0;
+    right: 0;
+    font-size: 72px;
+    transform: translateY(100%);
+    -webkit-text-stroke: 3px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.25); }
+
+  html #container .section-container .big-container .number-02,
+  body #container .section-container .big-container .number-02 {
+    position: absolute;
+    top: unset;
+    right: 0;
+    bottom: 5%;
+    transform: rotate(90deg) translateY(-50%);
+    font-size: 72px; }
+
+  html
+  #container
+  .section-container
+  .big-container
+  .letters-container
+  .letters
+  .container1,
+  html
+  #container
+  .section-container
+  .big-container
+  .letters-container
+  .letters
+  .container2,
+  body
+  #container
+  .section-container
+  .big-container
+  .letters-container
+  .letters
+  .container1,
+  body
+  #container
+  .section-container
+  .big-container
+  .letters-container
+  .letters
+  .container2 {
+    font-size: 72px; }
+
+  html
+  #container
+  .section-container
+  .big-container:nth-child(2)
+  .letters-container,
+  body
+  #container
+  .section-container
+  .big-container:nth-child(2)
+  .letters-container {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 92px;
+    bottom: 20%;
+    transform: translateY(60%); }
+
+  html #dimension .section-container .big-container .number-03,
+  body #dimension .section-container .big-container .number-03 {
+    transform: translate(-90%, 0%) rotate(-90deg);
+    bottom: unset;
+    top: 0;
+    right: unset;
+    left: 0;
+    font-size: 72px;
+    -webkit-text-stroke: 3px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.75); }
+
+  html
+  #dimension
+  .section-container
+  .big-container
+  .img-static
+  .dimension-letters,
+  body
+  #dimension
+  .section-container
+  .big-container
+  .img-static
+  .dimension-letters {
+    font-size: 68px; }
+
+  html #jewelry .crack-jewelry,
+  body #jewelry .crack-jewelry {
+    top: -150px;
+    right: -60px;
+    height: 250%; }
+
+  html
+  #jewelry
+  .section-container
+  .big-container
+  .jewelry-content
+  .img-static
+  .number-04,
+  body
+  #jewelry
+  .section-container
+  .big-container
+  .jewelry-content
+  .img-static
+  .number-04 {
+    transform: translate(90%, -50%);
+    font-size: 68px; }
+
+  html #jewelry .section-container .big-container .jewelry-letters,
+  body #jewelry .section-container .big-container .jewelry-letters {
+    font-size: 76px; }
+
+  html #fangio .section-container .big-container .fangio-letters,
+  body #fangio .section-container .big-container .fangio-letters {
+    transform: translate(-15%, -165%) rotate(90deg);
+    font-size: 72px; }
+
+  html #fangio .section-container .big-container:nth-child(2) .number-05,
+  body #fangio .section-container .big-container:nth-child(2) .number-05 {
+    font-size: 72px;
+    transform: translateY(10%); }
+
+  html
+  #matrix
+  .section-container
+  .big-container:nth-child(1)
+  .letters-matrix
+  .letters,
+  body
+  #matrix
+  .section-container
+  .big-container:nth-child(1)
+  .letters-matrix
+  .letters {
+    font-size: 72px;
+    height: 100px; }
+
+  html #matrix .section-container .big-container:nth-child(1) .letters-matrix,
+  body #matrix .section-container .big-container:nth-child(1) .letters-matrix {
+    transform: translateY(-75%); }
+
+  html .menu-extended .category,
+  body .menu-extended .category {
+    font-size: 38px; }
+
+  html .menu-extended,
+  body .menu-extended {
+    padding: 40px 20px; } }
 
 /*# sourceMappingURL=index.css.map */
