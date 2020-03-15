@@ -305,7 +305,8 @@ function sectionTransition(index) {
                 gsap.from('#dimension .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", y: 250 });
                 break;
             case 3:
-                gsap.from('#jewelry .big-container:nth-child(2) .img-static', { duration: 2.5, opacity: .5, ease: "power3.out", y: -250 });
+                gsap.from('#jewelry .big-container:nth-child(2) .img-static', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
+                gsap.from('#jewelry .big-container:nth-child(2) .img-static .number-04', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
                 gsap.from('#jewelry .big-container:nth-child(1) .jewelry-letters', { duration: 2.5, opacity: 0, ease: "power3.out", x: 250 });
                 gsap.from('#jewelry .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", y: 250 });
                 break;
