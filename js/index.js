@@ -227,3 +227,7 @@ closeInDetails.addEventListener('click', () => {
         })
     }, 1000)
 })
+
+gsap.from('header .header-item:nth-child(1)', { duration: 2.5, opacity: .5, ease: "power3.out", y:  500 });
+gsap.from('header .header-item:nth-child(1) .face', { duration: 2.5, opacity: .5, ease: "power3.out", y:  -1000 });
+gsap.from('header .header-item:nth-child(2)', { duration: 2.5, opacity: .5, ease: "power3.out", x:  500 });
