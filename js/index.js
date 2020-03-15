@@ -5,6 +5,7 @@ const menuToggler = document.querySelector('.menu');
 const menuExtended = document.querySelector('.menu-extended');
 const categories = document.querySelectorAll('.menu-extended .category');
 const customCursor = document.querySelector('.custom-cursor');
+const sections = document.querySelectorAll('section');
 
 const moreDetailsButtons = document.querySelectorAll('.mobile-expand');
 const mobileExpanded = document.querySelector('.mobile-expanded');
@@ -17,8 +18,8 @@ imgWrappers.forEach(imgWrapper => {
     // Adding Arrows to Image Wrappers
     const backArrow = document.createElement('img');
     const nextArrow = document.createElement('img');
-    backArrow.setAttribute('src', '/FranciscaDisipio/assets/images/back-arrow.svg');
-    nextArrow.setAttribute('src', '/FranciscaDisipio/assets/images/next-arrow.svg');
+    backArrow.setAttribute('src', '../assets/images/back-arrow.svg');
+    nextArrow.setAttribute('src', '../assets/images/next-arrow.svg');
     backArrow.classList.add('back-arrow');
     backArrow.classList.add('arrow');
     nextArrow.classList.add('next-arrow');
@@ -89,7 +90,6 @@ menuToggler.addEventListener("click", () => {
 
 // Scroll to sections on Menu Items
 
-const sections = document.querySelectorAll('section');
 const arrayCategories = Array.prototype.slice.call(categories);
 
 categories.forEach((category) => {
@@ -228,6 +228,63 @@ closeInDetails.addEventListener('click', () => {
     }, 1000)
 })
 
-gsap.from('header .header-item:nth-child(1)', { duration: 2.5, opacity: .5, ease: "power3.out", y:  500 });
-gsap.from('header .header-item:nth-child(1) .face', { duration: 2.5, opacity: .5, ease: "power3.out", y:  -1000 });
-gsap.from('header .header-item:nth-child(2)', { duration: 2.5, opacity: .5, ease: "power3.out", x:  500 });
+gsap.from('header .header-item:nth-child(1)', { duration: 2.5, opacity: .5, ease: "power3.out", y: 500 });
+gsap.from('header .header-item:nth-child(1) .face', { duration: 2.5, opacity: .5, ease: "power3.out", y: -1000 });
+gsap.from('header .header-item:nth-child(2)', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+gsap.from('.logo', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
+gsap.from('.number-00', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+
+window.addEventListener('scroll', function () {
+    sections.forEach((element, index) => {
+        var position = element.getBoundingClientRect();
+        // checking for partial visibility
+        var isTrueSet = (element.getAttribute('appeared') == 'true');
+        if (!isTrueSet && position.top < (window.innerHeight) && position.bottom >= 0) {
+            sectionTransition(index);
+            element.setAttribute('appeared', true);
+        }
+    })
+});
+
+function sectionTransition(index) {
+    switch (index) {
+        case 0:
+            gsap.from('.number-01', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
+            gsap.from('#furia .furia', { duration: 2.5, opacity: .5, ease: "power3.out", y: 500 });
+            break;
+        case 1:
+            gsap.from('.number-02', { duration: 2.5, opacity: .5, ease: "power3.out", y: -250 });
+            gsap.from('#container .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+            gsap.from('#container .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
+            break;
+        case 2:
+            gsap.from('#dimension .big-container:nth-child(1) .img-static', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+            gsap.from('#dimension .big-container:nth-child(1) .dimension-letters', { duration: 2.5, opacity: 0, ease: "power3.out", y: -250, x: -500 });
+            gsap.from('#dimension .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", y: 500 });
+            break;
+        case 3:
+            gsap.from('#jewelry .big-container:nth-child(2) .img-static', { duration: 2.5, opacity: .5, ease: "power3.out", y: -500 });
+            gsap.from('#jewelry .big-container:nth-child(1) .jewelry-letters', { duration: 2.5, opacity: 0, ease: "power3.out", x: 500 });
+            gsap.from('#jewelry .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", y: 500 });
+            break;
+        case 4:
+            gsap.from('#fangio .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
+            gsap.from('#fangio .fondo-fangio', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+            gsap.from('#fangio .fangio-letters', { duration: 2.5, opacity: 0, ease: "power3.out", y: 250 });
+            break;
+        case 5:
+            gsap.from('#matrix .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
+            gsap.from('#matrix .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+            gsap.from('#matrix .big-container:nth-child(1) .matrix1', { duration: 2.5, opacity: .5, ease: "power3.out", y: -250 });
+            gsap.from('#matrix .big-container:nth-child(1) .matrix2', { duration: 2.5, opacity: .5, ease: "power3.out", y: 250 });
+            gsap.from('#matrix .number-06', { duration: 2.5, opacity: .5, ease: "power3.out", x: 250 });
+            gsap.from('#matrix .number-06-bis', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
+            break;
+        case 6:
+            gsap.from('#museum .big-container:nth-child(1)', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
+            gsap.from('#museum .big-container:nth-child(1) .number-07', { duration: 2.5, opacity: 0, ease: "power3.out", x: 500, y: -250 });
+            gsap.from('#museum .big-container:nth-child(2) .img-container', { duration: 2.5, ease: "power3.out", y: 250 });
+            gsap.from('#museum .big-container:nth-child(2) .letters-museum', { duration: 2.5, opacity: .5, ease: "power3.out", x: 1000 });
+            break;
+    }
+}
