@@ -226,114 +226,114 @@ closeInDetails.addEventListener('click', () => {
     }, 1000)
 })
 
-// gsap.from('header .header-item:nth-child(1)', { duration: 2.5, opacity: .5, ease: "power3.out", y: 500 });
-// gsap.from('header .header-item:nth-child(1) .face', { duration: 2.5, opacity: .5, ease: "power3.out", y: -1000 });
-// gsap.from('header .header-item:nth-child(2)', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
-// gsap.from('.logo', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
-// gsap.from('.number-00', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+gsap.from('header .header-item:nth-child(1)', { duration: 2.5, opacity: .5, ease: "power3.out", y: 500 });
+gsap.from('header .header-item:nth-child(1) .face', { duration: 2.5, opacity: .5, ease: "power3.out", y: -1000 });
+gsap.from('header .header-item:nth-child(2)', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+gsap.from('.logo', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
+gsap.from('.number-00', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
 
-// window.addEventListener('scroll', function () {
-//     sections.forEach((element, index) => {
-//         var position = element.getBoundingClientRect();
-//         // checking for partial visibility
-//         var isTrueSet = (element.getAttribute('appeared') == 'true');
-//         if (window.innerWidth > 700) {
-//             if (!isTrueSet && position.top < (window.innerHeight + 100) && position.bottom >= 0) {
-//                 sectionTransition(index);
-//                 element.setAttribute('appeared', true);
-//             }
-//         } else {
-//             if (!isTrueSet && position.top < (window.innerHeight + 50) && position.bottom >= 0) {
-//                 sectionTransition(index);
-//                 element.setAttribute('appeared', true);
-//             }
-//         }
-//     })
-// });
+window.addEventListener('scroll', function () {
+    sections.forEach((element, index) => {
+        var position = element.getBoundingClientRect();
+        // checking for partial visibility
+        var isTrueSet = (element.getAttribute('appeared') == 'true');
+        if (window.innerWidth > 700) {
+            if (!isTrueSet && position.top < (window.innerHeight + 100) && position.bottom >= 0) {
+                sectionTransition(index);
+                element.setAttribute('appeared', true);
+            }
+        } else {
+            if (!isTrueSet && position.top < (window.innerHeight + 50) && position.bottom >= 0) {
+                sectionTransition(index);
+                element.setAttribute('appeared', true);
+            }
+        }
+    })
+});
 
-// function sectionTransition(index) {
-//     if (window.innerWidth > 700) {
-//         switch (index) {
-//             case 0:
-//                 gsap.from('.number-01', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
-//                 gsap.from('#furia .furia', { duration: 2.5, opacity: .5, ease: "power3.out", y: 500 });
-//                 break;
-//             case 1:
-//                 gsap.from('.number-02', { duration: 2.5, opacity: .5, ease: "power3.out", y: -250 });
-//                 gsap.from('#container .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
-//                 gsap.from('#container .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
-//                 break;
-//             case 2:
-//                 gsap.from('#dimension .big-container:nth-child(1) .img-static', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
-//                 gsap.from('#dimension .big-container:nth-child(1) .dimension-letters', { duration: 2.5, opacity: 0, ease: "power3.out", y: -250, x: -500 });
-//                 gsap.from('#dimension .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", y: 500 });
-//                 break;
-//             case 3:
-//                 gsap.from('#jewelry .big-container:nth-child(2) .img-static', { duration: 2.5, opacity: .5, ease: "power3.out", y: -500 });
-//                 gsap.from('#jewelry .big-container:nth-child(1) .jewelry-letters', { duration: 2.5, opacity: 0, ease: "power3.out", x: 500 });
-//                 gsap.from('#jewelry .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", y: 500 });
-//                 break;
-//             case 4:
-//                 gsap.from('#fangio .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
-//                 gsap.from('#fangio .fondo-fangio', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
-//                 gsap.from('#fangio .fangio-letters', { duration: 2.5, opacity: 0, ease: "power3.out", y: 250 });
-//                 break;
-//             case 5:
-//                 gsap.from('#matrix .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
-//                 gsap.from('#matrix .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
-//                 gsap.from('#matrix .big-container:nth-child(1) .matrix1', { duration: 2.5, opacity: .5, ease: "power3.out", y: -250 });
-//                 gsap.from('#matrix .big-container:nth-child(1) .matrix2', { duration: 2.5, opacity: .5, ease: "power3.out", y: 250 });
-//                 gsap.from('#matrix .number-06', { duration: 2.5, opacity: .5, ease: "power3.out", x: 250 });
-//                 gsap.from('#matrix .number-06-bis', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
-//                 break;
-//             case 6:
-//                 gsap.from('#museum .big-container:nth-child(1)', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
-//                 gsap.from('#museum .big-container:nth-child(1) .number-07', { duration: 2.5, opacity: 0, ease: "power3.out", x: 500, y: -250 });
-//                 gsap.from('#museum .big-container:nth-child(2) .img-container', { duration: 2.5, ease: "power3.out", y: 250 });
-//                 gsap.from('#museum .big-container:nth-child(2) .letters-museum', { duration: 2.5, opacity: .5, ease: "power3.out", x: 1000 });
-//                 break;
-//         }
-//     } else {
-//         switch (index) {
-//             case 0:
-//                 gsap.from('.number-01', { duration: 2.5, opacity: .5, ease: "power3.out", x: -125 });
-//                 gsap.from('#furia .furia', { duration: 2.5, opacity: .5, ease: "power3.out", y: 250 });
-//                 break;
-//             case 1:
-//                 gsap.from('.number-02', { duration: 2.5, opacity: .5, ease: "power3.out", y: -125 });
-//                 gsap.from('#container .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: 250 });
-//                 gsap.from('#container .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
-//                 break;
-//             case 2:
-//                 gsap.from('#dimension .big-container:nth-child(1) .img-static', { duration: 2.5, opacity: .5, ease: "power3.out", x: 250 });
-//                 gsap.from('#dimension .big-container:nth-child(1) .dimension-letters', { duration: 2.5, opacity: 0, ease: "power3.out", y: -125, x: -250 });
-//                 gsap.from('#dimension .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", y: 250 });
-//                 break;
-//             case 3:
-//                 gsap.from('#jewelry .big-container:nth-child(2) .img-static', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
-//                 gsap.from('#jewelry .big-container:nth-child(2) .img-static .number-04', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
-//                 gsap.from('#jewelry .big-container:nth-child(1) .jewelry-letters', { duration: 2.5, opacity: 0, ease: "power3.out", x: 250 });
-//                 gsap.from('#jewelry .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", y: 250 });
-//                 break;
-//             case 4:
-//                 gsap.from('#fangio .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
-//                 gsap.from('#fangio .fondo-fangio', { duration: 2.5, opacity: .5, ease: "power3.out", x: 250 });
-//                 gsap.from('#fangio .fangio-letters', { duration: 2.5, opacity: 0, ease: "power3.out", y: 125 });
-//                 break;
-//             case 5:
-//                 gsap.from('#matrix .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
-//                 gsap.from('#matrix .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: 250 });
-//                 gsap.from('#matrix .big-container:nth-child(1) .matrix1', { duration: 2.5, opacity: .5, ease: "power3.out", y: -125 });
-//                 gsap.from('#matrix .big-container:nth-child(1) .matrix2', { duration: 2.5, opacity: .5, ease: "power3.out", y: 125 });
-//                 gsap.from('#matrix .number-06', { duration: 2.5, opacity: .5, ease: "power3.out", x: 125 });
-//                 gsap.from('#matrix .number-06-bis', { duration: 2.5, opacity: .5, ease: "power3.out", x: -125 });
-//                 break;
-//             case 6:
-//                 gsap.from('#museum .big-container:nth-child(1)', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
-//                 gsap.from('#museum .big-container:nth-child(1) .number-07', { duration: 2.5, opacity: 0, ease: "power3.out", x: 250, y: -125 });
-//                 gsap.from('#museum .big-container:nth-child(2) .img-container', { duration: 2.5, ease: "power3.out", y: 125 });
-//                 gsap.from('#museum .big-container:nth-child(2) .letters-museum', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
-//                 break;
-//         }
-//     }
-// }
+function sectionTransition(index) {
+    if (window.innerWidth > 700) {
+        switch (index) {
+            case 0:
+                gsap.from('.number-01', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
+                gsap.from('#furia .furia', { duration: 2.5, opacity: .5, ease: "power3.out", y: 500 });
+                break;
+            case 1:
+                gsap.from('.number-02', { duration: 2.5, opacity: .5, ease: "power3.out", y: -250 });
+                gsap.from('#container .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+                gsap.from('#container .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
+                break;
+            case 2:
+                gsap.from('#dimension .big-container:nth-child(1) .img-static', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+                gsap.from('#dimension .big-container:nth-child(1) .dimension-letters', { duration: 2.5, opacity: 0, ease: "power3.out", y: -250, x: -500 });
+                gsap.from('#dimension .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", y: 500 });
+                break;
+            case 3:
+                gsap.from('#jewelry .big-container:nth-child(2) .img-static', { duration: 2.5, opacity: .5, ease: "power3.out", y: -500 });
+                gsap.from('#jewelry .big-container:nth-child(1) .jewelry-letters', { duration: 2.5, opacity: 0, ease: "power3.out", x: 500 });
+                gsap.from('#jewelry .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", y: 500 });
+                break;
+            case 4:
+                gsap.from('#fangio .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
+                gsap.from('#fangio .fondo-fangio', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+                gsap.from('#fangio .fangio-letters', { duration: 2.5, opacity: 0, ease: "power3.out", y: 250 });
+                break;
+            case 5:
+                gsap.from('#matrix .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
+                gsap.from('#matrix .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+                gsap.from('#matrix .big-container:nth-child(1) .matrix1', { duration: 2.5, opacity: .5, ease: "power3.out", y: -250 });
+                gsap.from('#matrix .big-container:nth-child(1) .matrix2', { duration: 2.5, opacity: .5, ease: "power3.out", y: 250 });
+                gsap.from('#matrix .number-06', { duration: 2.5, opacity: .5, ease: "power3.out", x: 250 });
+                gsap.from('#matrix .number-06-bis', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
+                break;
+            case 6:
+                gsap.from('#museum .big-container:nth-child(1)', { duration: 2.5, opacity: .5, ease: "power3.out", x: -500 });
+                gsap.from('#museum .big-container:nth-child(1) .number-07', { duration: 2.5, opacity: 0, ease: "power3.out", x: 500, y: -250 });
+                gsap.from('#museum .big-container:nth-child(2) .img-container', { duration: 2.5, ease: "power3.out", y: 250 });
+                gsap.from('#museum .big-container:nth-child(2) .letters-museum', { duration: 2.5, opacity: .5, ease: "power3.out", x: 1000 });
+                break;
+        }
+    } else {
+        switch (index) {
+            case 0:
+                gsap.from('.number-01', { duration: 2.5, opacity: .5, ease: "power3.out", x: -125 });
+                gsap.from('#furia .furia', { duration: 2.5, opacity: .5, ease: "power3.out", y: 250 });
+                break;
+            case 1:
+                gsap.from('.number-02', { duration: 2.5, opacity: .5, ease: "power3.out", y: -125 });
+                gsap.from('#container .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: 250 });
+                gsap.from('#container .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
+                break;
+            case 2:
+                gsap.from('#dimension .big-container:nth-child(1) .img-static', { duration: 2.5, opacity: .5, ease: "power3.out", x: 250 });
+                gsap.from('#dimension .big-container:nth-child(1) .dimension-letters', { duration: 2.5, opacity: 0, ease: "power3.out", y: -125, x: -250 });
+                gsap.from('#dimension .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", y: 250 });
+                break;
+            case 3:
+                gsap.from('#jewelry .big-container:nth-child(2) .img-static', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
+                gsap.from('#jewelry .big-container:nth-child(2) .img-static .number-04', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+                gsap.from('#jewelry .big-container:nth-child(1) .jewelry-letters', { duration: 2.5, opacity: 0, ease: "power3.out", x: 250 });
+                gsap.from('#jewelry .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", y: 250 });
+                break;
+            case 4:
+                gsap.from('#fangio .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
+                gsap.from('#fangio .fondo-fangio', { duration: 2.5, opacity: .5, ease: "power3.out", x: 250 });
+                gsap.from('#fangio .fangio-letters', { duration: 2.5, opacity: 0, ease: "power3.out", y: 125 });
+                break;
+            case 5:
+                gsap.from('#matrix .big-container:nth-child(1) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
+                gsap.from('#matrix .big-container:nth-child(2) .img-container', { duration: 2.5, opacity: .5, ease: "power3.out", x: 250 });
+                gsap.from('#matrix .big-container:nth-child(1) .matrix1', { duration: 2.5, opacity: .5, ease: "power3.out", y: -125 });
+                gsap.from('#matrix .big-container:nth-child(1) .matrix2', { duration: 2.5, opacity: .5, ease: "power3.out", y: 125 });
+                gsap.from('#matrix .number-06', { duration: 2.5, opacity: .5, ease: "power3.out", x: 125 });
+                gsap.from('#matrix .number-06-bis', { duration: 2.5, opacity: .5, ease: "power3.out", x: -125 });
+                break;
+            case 6:
+                gsap.from('#museum .big-container:nth-child(1)', { duration: 2.5, opacity: .5, ease: "power3.out", x: -250 });
+                gsap.from('#museum .big-container:nth-child(1) .number-07', { duration: 2.5, opacity: 0, ease: "power3.out", x: 250, y: -125 });
+                gsap.from('#museum .big-container:nth-child(2) .img-container', { duration: 2.5, ease: "power3.out", y: 125 });
+                gsap.from('#museum .big-container:nth-child(2) .letters-museum', { duration: 2.5, opacity: .5, ease: "power3.out", x: 500 });
+                break;
+        }
+    }
+}
